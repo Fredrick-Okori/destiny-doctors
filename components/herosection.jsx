@@ -1,10 +1,11 @@
-"use client"
-import React, { useState } from 'react';
+'use client'
+import React from 'react';
 import {
     Box,
     Text,
     Button,
     Image,
+    Heading,
     Stack
 } from '@chakra-ui/react';
 import Slider from 'react-slick';
@@ -13,162 +14,92 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { FiArrowRight } from "react-icons/fi";
 
+const slides = [
+    {
+        id: 1,
+        image: './homepage-5-slider-img-3.jpg',
+        title: 'Destiny Doctors Uganda',
+        subtitle: 'We are transforming healthcare in our society. Want to join this exciting journey?',
+    },
+    {
+        id: 2,
+        image: './Carousel_community.jpg',
+        title: 'Called to serve',
+        subtitle: 'We are transforming healthcare in our society. Want to join this exciting journey?',
+    },
+    {
+        id: 3,
+        image: './Casest-7.jpg',
+        title: 'Destiny Doctors Uganda',
+        subtitle: 'We are transforming healthcare in our society. Want to join this exciting journey?',
+    },
+    // Add more slides as needed
+];
 
-export default function HeroSection() {
+const HeroSection = () => {
     const settings = {
-      
         infinite: true,
-        speed: 600,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
-       
+        fade: true,
+        speed: 2000,
+        autoplaySpeed: 500,
     };
 
     return (
         <Slider {...settings}>
-            <Box key={1} position="relative">
-                <Image
-                    src='./homepage-5-slider-img-3.jpg'
-                    alt="Hero Image 1"
-                    w="100%"
-                    h="1000px"
-                    objectFit="cover"
-                />
-                <Box
-                    position="absolute"
-                    top="50%"
-                    left="50%"
-                    transform="translate(-50%, -50%)"
-                    textAlign="center"
-                    color="white"
-                >
-                    <Text
-                        bgGradient='linear(to-l, #fff, #fff)'
-                        color='white'
-                        bgClip='text'
-                        fontSize={['4xl', '5xl', '6xl']}
-                        fontWeight='extrabold'
+            {slides.map((slide) => (
+                <Box key={slide.id} position="relative">
+                    <Image
+                        src={slide.image}
+                        alt={`Hero Image ${slide.id}`}
+                        w="100%"
+                        h="100vh"
+                        objectFit="cover"
+                    />
+                    <Box
+                        position="absolute"
+                        top="50%"
+                        left="50%"
+                        transform="translate(-50%, -50%)"
+                        textAlign="center"
+                        color="white"
                     >
-                        Destiny Doctors Uganda
-                    </Text>
-                    <Text fontSize="xl">
-                        We are transforming healthcare in our society. Want to join this exciting journey?
-                    </Text>
-                    <Box py='7'>
-                        <Button
-                            rightIcon={<FiArrowRight />}
-                            bg='white'
-                            variant='outline'
-                            as="button"
-                            color='#37B34A'
-                            px="12"
-                            py="7"
-                            fontWeight="bold"
-                            _hover={{ bg: '#214B24' }}
+                        <Text
+                            bgGradient='linear(to-l, #fff, #fff)'
+                            color='white'
+                            bgClip='text'
+                            fontSize={['2xl', '5xl', '6xl']}
+                            fontWeight='extrabold'
+                            noOfLines={1}
                         >
-                            Contact us
-                        </Button>
+                            {slide.title}
+                        </Text>
+                        
+                        <Text fontSize="xl">
+                            {slide.subtitle}
+                        </Text>
+                        <Box py='7'>
+                            <Button
+                                rightIcon={<FiArrowRight />}
+                                bg='white'
+                                variant='outline'
+                              
+                                color='#37B34A'
+                                px="12"
+                                py="7"
+                                fontWeight="bold"
+                                _hover={{ bg: '#214B24' }}
+                            >
+                                Contact us
+                            </Button>
+                        </Box>
                     </Box>
                 </Box>
-            </Box>
-
-            <Box key={2} position="relative">
-                <Image
-                    src='./Carousel_community.jpg'
-                    alt="Hero Image 1"
-                    w="100%"
-                    h="1000px"
-                    objectFit="cover"
-                />
-                <Box
-                    position="absolute"
-                    top="50%"
-                    left="50%"
-                    transform="translate(-50%, -50%)"
-                    textAlign="center"
-                    color="white"
-                >
-                    <Text
-                        bgGradient='linear(to-l, #fff, #fff)'
-                        color='white'
-                        bgClip='text'
-                        fontSize={['4xl', '5xl', '6xl']}
-                        fontWeight='extrabold'
-                    >
-                       Called to serve
-                    </Text>
-                    <Text fontSize="xl">
-                        We are transforming healthcare in our society. Want to join this exciting journey?
-                    </Text>
-                    <Box py='7'>
-                        <Button
-                            rightIcon={<FiArrowRight />}
-                            bg='white'
-                            variant='outline'
-                            as="button"
-                            color='#37B34A'
-                            px="12"
-                            py="7"
-                            fontWeight="bold"
-                            _hover={{ bg: '#214B24' }}
-                        >
-                            Contact us
-                        </Button>
-                    </Box>
-                </Box>
-            </Box>
-
-            <Box key={3} position="relative">
-                <Image
-                    src='./Casest-7.jpg'
-                    alt="Hero Image 3"
-                    w="100%"
-                    h="100%"
-                    objectFit="cover"
-                />
-                <Box
-                    position="absolute"
-                    top="50%"
-                    left="50%"
-                    transform="translate(-50%, -50%)"
-                    textAlign="center"
-                    color="white"
-                >
-                    <Text
-                        bgGradient='linear(to-l, #fff, #fff)'
-                        color='white'
-                        bgClip='text'
-                        fontSize={['4xl', '5xl', '6xl']}
-                        fontWeight='extrabold'
-                    >
-                        Destiny Doctors Uganda
-                    </Text>
-                    <Text fontSize="xl">
-                        We are transforming healthcare in our society. Want to join this exciting journey?
-                    </Text>
-                    <Box py='7'>
-                        <Button
-                            rightIcon={<FiArrowRight />}
-                            bg='white'
-                            variant='outline'
-                            as="button"
-                            color='#37B34A'
-                            px="12"
-                            py="7"
-                            fontWeight="bold"
-                            _hover={{ bg: '#214B24' }}
-                        >
-                            Contact us
-                        </Button>
-                    </Box>
-                </Box>
-            </Box>
-
-            {/* Repeat the above structure for other slides */}
-            {/* <Box key={2}>...</Box>
-      <Box key={3}>...</Box> */}
+            ))}
         </Slider>
     );
-}
+};
+
+export default HeroSection;

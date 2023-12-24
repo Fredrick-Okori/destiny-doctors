@@ -1,5 +1,6 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import NextLink from 'next/link'
 import {
     Box,
     Flex,
@@ -13,14 +14,18 @@ import {
     DrawerCloseButton,
     DrawerHeader,
     DrawerBody,
-    Container,
+    Button,
+    Image,
+    Text
+
 } from "@chakra-ui/react";
 import { FiX, FiMenu } from "react-icons/fi";
 
 
+
 export default function NavBar(props) {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+    
 
     const handleDrawerOpen = () => {
         setIsDrawerOpen(true);
@@ -30,29 +35,11 @@ export default function NavBar(props) {
         setIsDrawerOpen(false);
     };
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const scrollPosition = window.scrollY;
-    //         // Adjust the value based on when you want the navbar to become fixed
-    //         const scrollThreshold = 300;
-
-    //         if (scrollPosition > scrollThreshold) {
-    //             setIsNavbarFixed(true);
-    //         } else {
-    //             setIsNavbarFixed(false);
-    //         }
-    //     };
-
-    //     window.addEventListener("scroll", handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, []);
+    
     return (
         <>
 
-            <Flex bg="white" p="10" alignItems="center"
+            <Flex bg="#214B24" p="7" alignItems="center"
                 pos={'fixed'}
                 top={'0'}
                 left={'0'}
@@ -62,23 +49,45 @@ export default function NavBar(props) {
                >
 
                 <Box>
-                    <Heading as="h1" size="md" color="#37B34A">
-                        Destiny Doctors
+                    <Flex flexDirection={'row'} alignItems={'center'} gap='2'>
+                        <Image src="./images/logo_colored.png" alt='Destiny Dectors Uganda' />
+                        <Heading as={'h1'} size="md" color="#37B34A" borderLeft={'2px solid #37B34A'} ml='5' pl={'7'}>
+                        Destiny Doctors <br /> Uganda
                     </Heading>
+</Flex>
                 </Box>
                 <Spacer />
                 <Box display={{ base: 'none', md: 'block' }}>
-                    <Link color="#37B34A" mr="4">
+                    <Link color="#37B34A" mr="4" p={'5'} _hover={{ borderBottom: '1px solid #37B34A' }} >
                         Home
                     </Link>
-                    <Link color="#37B34A" mr="4">
+                    <Link color="#37B34A" mr="4" p={'5'} _hover={{ borderBottom: '1px solid #37B34A' }}>
                         About
                     </Link>
-                    <Link color="#37B34A" mr="4">
+                    <Link color="#37B34A" mr="4" p={'5'} _hover={{ borderBottom: '1px solid #37B34A' }} >
+                        Team
+                    </Link>
+                    <Link color="#37B34A" mr="4" p={'5'} _hover={{ borderBottom: '1px solid #37B34A' }} >
+                        Programs
+                    </Link>
+                    <Link color="#37B34A" mr="4" p={'5'} _hover={{ borderBottom: '1px solid #37B34A' }}>
                         Contact
                     </Link>
-                    <Link color="#37B34A">Gallery</Link>
+                    <Link color="#37B34A" p={'5'} _hover={{ borderBottom: '1px solid #37B34A' }}>Gallery</Link>
+</Box>
+                <Spacer />
+                <Box>
+                    <Button 
+                        bg='white'
+                        variant='outline'
+
+                        color='#37B34A'
+                        px="12"
+                        py="7"
+                        fontWeight="bold"
+                        _hover={{ bg: '#214B24' }}>Donate</Button>
                 </Box>
+
                 <Box display={{ base: 'block', md: 'none' }}>
                     <IconButton
                         colorScheme="teal"

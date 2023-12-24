@@ -1,17 +1,19 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import { Text } from '@chakra-ui/react'
+
 import NavBar from '@/components/navbar'
 import HeroSection from '@/components/herosection'
 import Mission from '@/components/mission'
+import Footer from '@/components/footer'
+import Partners from '@/components/partnerlogos'
+
 
 export default function Home() {
   return (
-   <>
-      <NavBar/>
+    <>
+      <NavBar />
       <HeroSection />
       <Mission />
-      <Mission />
+      <Partners/>
+      <Footer />
     </>
   )
 }
