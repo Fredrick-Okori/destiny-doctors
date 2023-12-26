@@ -22,6 +22,7 @@ import { FiMaximize, FiLayers, FiNavigation, FiActivity, FiHeart, FiPocket } fro
 // import TeamPage from "./team";
 import Executive from "./executive";
 import Programs from './programs'
+import ContactForm from "./contact";
 const mission = [
     {
         id: 1,
@@ -163,7 +164,7 @@ export default function Mission() {
     
             <Executive />
             <Programs/>
-          
+          <ContactForm/>
 
         </>
     );

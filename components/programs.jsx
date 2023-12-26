@@ -21,7 +21,7 @@ const App = () => (
                 <Box
                     width={{ lg: 'sm' }}
                     transform={{ base: 'translateY(-50%)', lg: 'none' }}
-
+                    bg={{ base: useColorModeValue('red.50', 'gray.700'), lg: 'transparent' }}
                     mx={{ base: '6', md: '8', lg: '0' }}
                     px={{ base: '6', md: '8', lg: '0' }}
                     py={{ base: '6', md: '8', lg: '12' }}
@@ -36,7 +36,7 @@ const App = () => (
                             </Heading>
                         </Stack>
                         <HStack spacing="3">
-                            <Link color={'white'} fontWeight="bold" fontSize="lg">
+                            <Link color={{ base: '#ffff', lg: '#214B24'}} fontWeight="bold" fontSize="lg">
                                 Read More
                             </Link>
                             <Icon color={'white'} as={FaArrowRight} />
@@ -52,11 +52,12 @@ const App = () => (
                         minW="300px"
                         objectFit="cover"
                         flex="1"
+                        
                     />
                     <Image
                         display={{ base: 'none', sm: 'initial' }}
                         src="rwimi_ncd.jpg"
-                        alt="Lovely Image"
+                        alt="community Health Empowerment"
                         fallback={<Skeleton />}
                         maxH="450px"
                         objectFit="cover"
@@ -67,7 +68,7 @@ const App = () => (
                 <Box
                     width={{ lg: 'sm' }}
                     transform={{ base: 'translateY(-50%)', lg: 'none' }}
-
+                    bg={{ base: useColorModeValue('red.50', 'gray.700'), lg: 'transparent' }}
                     mx={{ base: '6', md: '8', lg: '0' }}
                     px={{ base: '6', md: '8', lg: '0' }}
                     py={{ base: '6', md: '8', lg: '12' }}
@@ -82,17 +83,17 @@ const App = () => (
                             </Heading>
                         </Stack>
                         <HStack spacing="3">
-                            <Link color={'white'} fontWeight="bold" fontSize="lg">
+                            <Link color={{ base: '#ffff', lg: '#214B24' }} fontWeight="bold" fontSize="lg">
                                 Read More
                             </Link>
-                            <Icon color={'white'} as={FaArrowRight} />
+                            <Icon color={{ base: '#ffff', lg: '#214B24' }} as={FaArrowRight} />
                         </HStack>
                     </Stack>
                 </Box>
                 <Flex flex="1" overflow="hidden">
                     <Image
                         src="/jb_conference.jpg"
-                        alt="Lovely Image"
+                        alt="Digital Health Program"
                         fallback={<Skeleton />}
                         maxH="450px"
                         minW="300px"
@@ -102,7 +103,7 @@ const App = () => (
                     <Image
                         display={{ base: 'none', sm: 'initial' }}
                         src="digital_health.jpg"
-                        alt="Lovely Image"
+                        alt="Digital Health Program"
                         fallback={<Skeleton />}
                         maxH="450px"
                         objectFit="cover"

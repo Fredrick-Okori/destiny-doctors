@@ -26,26 +26,26 @@ export default function Executive() {
         <>
 
             <Container maxW={'100%'} bg='white' mt={'15px'}>
-               
-                    <Center >
+
+                <Center >
                     <Heading
                         color={'#214B24'}
                         as='h1'
                         fontSize='6xl'
-                            fontWeight='extrabold'
-                            mt={'30px'}
+                        fontWeight='extrabold'
+                        mt={'30px'}
                     >
-                        Executive Team 
+                        Executive Team
                     </Heading>
-                  
-                </Center>   
+
+                </Center>
                 <Text textAlign='center' color={'#214B24'}>
-                    Young. dedicated. Professional. 
-                </Text> 
-              
-                
-              <TeamPage/>
-        </Container>
+                    Young. dedicated. Professional.
+                </Text>
+
+
+                <TeamPage />
+            </Container>
         </>
     )
 }
