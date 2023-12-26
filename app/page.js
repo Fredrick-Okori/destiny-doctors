@@ -5,11 +5,17 @@ import Mission from '@/components/mission'
 import Footer from '@/components/footer'
 import Partners from '@/components/partnerlogos'
 
+import { extendTheme, Box, useBreakpointValue } from '@chakra-ui/react'
+
 
 export default function Home() {
+
   return (
     <>
-      <NavBar />
+      
+          <NavBar/>
+      
+    
       <HeroSection />
       <Mission />
       <Partners/>

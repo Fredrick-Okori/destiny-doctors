@@ -18,9 +18,10 @@ import {
 
 import { FiMaximize, FiLayers, FiNavigation, FiActivity, FiHeart, FiPocket } from "react-icons/fi";
 
+
 // import TeamPage from "./team";
 import Executive from "./executive";
-
+import Programs from './programs'
 const mission = [
     {
         id: 1,
@@ -160,7 +161,8 @@ export default function Mission() {
             </Flex>
         </Container>
     
-                <Executive />
+            <Executive />
+            <Programs/>
           
 
         </>

@@ -5,6 +5,7 @@ import {
     Text,
     Button,
     Image,
+    ButtonGroup,
     Heading,
     Stack
 } from '@chakra-ui/react';
@@ -81,19 +82,30 @@ const HeroSection = () => {
                             {slide.subtitle}
                         </Text>
                         <Box py='7'>
-                            <Button
-                                rightIcon={<FiArrowRight />}
-                                bg='white'
-                                variant='outline'
-                              
-                                color='#37B34A'
-                                px="12"
-                                py="7"
-                                fontWeight="bold"
-                                _hover={{ bg: '#214B24' }}
-                            >
-                                Contact us
-                            </Button>
+                            <ButtonGroup gap={'2'} mt={'5'} mb={'10'}>
+                                <Button
+                                    bg='white'
+                                    variant='outline'
+                                    color='#37B34A'
+                                    px={{ base: '12', md: '12' }}
+                                    py={{ base: '7', md: '7' }}
+                                    fontWeight="bold"
+                                    _hover={{ bg: '#214B24' }}
+                          
+                                   
+
+                                >Get in touch</Button>
+                                <Button
+                                    bg='#214B24'
+                                    variant='outline'
+                                    color='#37B34A'
+                                    px="12"
+                                    py="7"
+                                    fontWeight="bold"
+                                    _hover={{ bg: '#214B24', color: '#37B34A' }}
+                                >Give to us</Button>
+                            </ButtonGroup>
+
                         </Box>
                     </Box>
                 </Box>
