@@ -130,7 +130,7 @@ export default function Mission() {
                         </Box>
                         <Box mt={'20'} textAlign={'center'}>
                             <Heading as={'h4'} color={'#214B24'}>Impressed with this kind of work?</Heading>
-                            <Text lineHeight={'1.7rem'}>Let's explore available opportunities or <br />
+                            <Text lineHeight={'1.7rem'}>Lets explore available opportunities or <br />
                                 create bespoke solutions to serve our communities
                             </Text>
                             <ButtonGroup gap={'2'} mt={'5'} mb={'10'}>
