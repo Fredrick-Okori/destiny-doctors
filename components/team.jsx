@@ -74,7 +74,7 @@ const TeamPage = () => {
             id: 9,
             name: "Mr. Martin Batte",
             role: "Public Relations Officer",
-            imageUrl: ("/images/fred.jpg"), // Update with the actual path to your image
+            imageUrl: ("/images/nakato.jpg"), // Update with the actual path to your image
             bio: "Lorem ipsum dolor sit amet",
         },
         {

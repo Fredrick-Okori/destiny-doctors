@@ -31,7 +31,7 @@ const logos = [
     },
     {
         id: 5,
-        image: ("/images/ggave.png"),
+        image: ("/images/tmhc_pharmacy.jpg"),
     },
         // Add more slides as needed
     ];    
