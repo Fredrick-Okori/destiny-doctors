@@ -1,25 +1,24 @@
-
-import NavBar from '@/components/navbar'
-import HeroSection from '@/components/herosection'
-import Mission from '@/components/mission'
-import Footer from '@/components/footer'
-import Partners from '@/components/partnerlogos'
-
-import { extendTheme, Box, useBreakpointValue } from '@chakra-ui/react'
-
+'use client'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from '@/components/navbar';
+import Footer from '@/components/footer';
+import Start from '@/components/start';
+import Executive from '@/components/executive';
+import OurPrograms from '@/components/ourPrograms.page';
+import ContactUsLayout from '@/components/contact';
 
 export default function Home() {
-
   return (
-    <>
-      
-          <NavBar/>
-      
-    
-      <HeroSection />
-      <Mission />
-      <Partners/>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Start />} />
+        <Route path='/our-programs' element={<OurPrograms />} />
+        <Route path="/our-team" element={<Executive />} />
+        <Route path='/find-us' element={<ContactUsLayout />} />
+      </Routes>
       <Footer />
-    </>
-  )
+    </Router>
+  );
 }

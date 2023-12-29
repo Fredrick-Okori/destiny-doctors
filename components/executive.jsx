@@ -24,24 +24,42 @@ import NavBar from "./navbar";
 export default function Executive() {
     return (
         <>
+            <Box position="relative">
+                <Image
+                    src='./programs_outreach.jpg'
+                    alt={`Hero Image `}
+                    w="100%"
+                    h="40vh"
+                    objectFit="cover"
+                />
+                <Box
+                    position="absolute"
+                    top="50%"
+                    left="30%"
+                    transform="translate(-50%, -50%)"
+                    textAlign="center"
+                    color="white"
+                >
 
-            <Container maxW={'100%'} bg='white' mt={'15px'}>
+                    <Center >
+                        <Heading
+                            color={'white'}
+                            as='h1'
+                            fontSize='6xl'
+                            fontWeight='extrabold'
+                            mt={'30px'}
+                        >
+                            Executive Team
+                        </Heading>
 
-                <Center >
-                    <Heading
-                        color={'#214B24'}
-                        as='h1'
-                        fontSize='6xl'
-                        fontWeight='extrabold'
-                        mt={'30px'}
-                    >
-                        Executive Team
-                    </Heading>
+                    </Center>
+                    <Text textAlign='center' color={'white'}>
+                        Young. dedicated. Professional.
+                    </Text>
+                </Box>
+            </Box>
+            <Container maxW={'100%'} bg='white' mt='-15px'>
 
-                </Center>
-                <Text textAlign='center' color={'#214B24'}>
-                    Young. dedicated. Professional.
-                </Text>
 
 
                 <TeamPage />

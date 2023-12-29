@@ -74,7 +74,7 @@ const TeamPage = () => {
             id: 9,
             name: "Mr. Martin Batte",
             role: "Public Relations Officer",
-            imageUrl: ("/images/nakato.jpg"), // Update with the actual path to your image
+            imageUrl: ("/images/batte.jpg"), // Update with the actual path to your image
             bio: "Lorem ipsum dolor sit amet",
         },
         {
@@ -119,6 +119,9 @@ const TeamPage = () => {
 
 
     return (
+        <>
+       
+      
         <Container maxW="container.xl" mt={'15px'} >
             <Center >
                 <Flex flexDirection={'column'}>
@@ -187,7 +190,8 @@ const TeamPage = () => {
                     </GridItem>
                 ))}
             </Grid>
-        </Container>
+            </Container>
+        </>
     );
 };
 

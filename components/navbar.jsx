@@ -1,5 +1,6 @@
 
 'use client'
+
 import {
     Box,
     Button,
@@ -8,10 +9,17 @@ import {
     Flex,
     Image,
 } from '@chakra-ui/react';
+import Executive from './executive';
+import { NavLink } from 'react-router-dom';
+
+
 
 
 
 export default function Navbar() {
+
+
+
     return (
         <Box
             as="nav"
@@ -46,15 +54,19 @@ export default function Navbar() {
                             gap={{ base: 'var(--chakra-space-2)', md: 'var(--chakra-space-4)' }}
                         >
                             <Button
+                                as={NavLink}
                                 p="5"
                                 color="#37B34A"
                                 variant="none"
                                 transition="transform 0.6s ease"
                                 _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
+                                to='/'
                             >
                                 Home
                             </Button>
                             <Button
+                                as={NavLink}
+                                to='/about-us'
                                 p="5"
                                 color="#37B34A"
                                 variant="none"
@@ -64,6 +76,8 @@ export default function Navbar() {
                                 About us
                             </Button>
                             <Button
+                                as={NavLink}
+                                to='/our-programs'
                                 color="#37B34A"
                                 p={'5'}
                                 variant={'none'}
@@ -73,6 +87,9 @@ export default function Navbar() {
                                 Our Programs
                             </Button>
                             <Button
+                                as={NavLink}
+                                to='/our-team'
+                                                        
                                 p={'5'}
                                 color="#37B34A" variant={'none'}
                                 transition="transform 0.6s ease"
@@ -81,6 +98,8 @@ export default function Navbar() {
                                 Team
                             </Button>
                             <Button
+                                as={NavLink}
+                                to='/find-us'
                                 p={'5'}
                                 color="#37B34A" variant={'none'}
                                 transition="transform 0.6s ease"
@@ -89,21 +108,16 @@ export default function Navbar() {
                                 Find us
                             </Button>
                             <Button
+                                as={NavLink}
                                 p={'5'}
                                 color="#37B34A" variant={'none'}
                                 transition="transform 0.6s ease"
                                 _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
+                                to='/gallery'
                             >
                                 Gallery
                             </Button>
-                            <Button
-                                p={'5'}
-                                color="#37B34A" variant={'none'}
-                                transition="transform 0.6s ease"
-                                _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
-                            >
-                                FAQs
-                            </Button>
+
                         </ButtonGroup>
                     
                     </Flex>
