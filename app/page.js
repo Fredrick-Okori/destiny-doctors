@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route , Navigate} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Start from '@/components/start';
@@ -17,7 +17,7 @@ export default function Home() {
         <Route path='/our-programs' element={<OurPrograms />} />
         <Route path="/our-team" element={<Executive />} />
         <Route path='/find-us' element={<ContactUsLayout />} />
-        <Route path='*' element={<Navigate to="/" />} />
+       
       </Routes>
       <Footer />
     </Router>
