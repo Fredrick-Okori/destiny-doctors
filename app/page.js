@@ -1,25 +1,44 @@
 'use client'
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
 import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Start from '@/components/start';
 import Executive from '@/components/executive';
 import OurPrograms from '@/components/ourPrograms.page';
 import ContactUsLayout from '@/components/contact';
+import Gallery from '@/components/gallery';
 
 export default function Home() {
+  const [currentPage, setCurrentPage] = useState('/');
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case '/':
+        return <Start />;
+      case '/our-team':
+        return <Executive />;
+      case '/programs':
+        return <OurPrograms />;
+      case '/find-us':
+        return <ContactUsLayout />;
+      case '/gallery':
+        return <Gallery />;
+      case '/programs':
+        return <OurPrograms/>
+      default:
+        return null;
+    }
+  };
+
+  const navigateTo = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
-    <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Start />} />
-        <Route path='/our-programs' element={<OurPrograms />} />
-        <Route path="/our-team" element={<Executive />} />
-        <Route path='/find-us' element={<ContactUsLayout />} />
-       
-      </Routes>
+    <>
+      <NavBar navigateTo={navigateTo} />
+      {renderPage()}
       <Footer />
-    </Router>
+    </>
   );
 }

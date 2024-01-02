@@ -1,6 +1,6 @@
 
 'use client'
-
+import React, {useState} from 'react'
 import {
     Box,
     Button,
@@ -10,15 +10,13 @@ import {
     Image,
 } from '@chakra-ui/react';
 import Executive from './executive';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
 
 
 
 
 
-export default function Navbar() {
-
-
+export default function Navbar({navigateTo}) {
 
     return (
         <Box
@@ -54,19 +52,19 @@ export default function Navbar() {
                             gap={{ base: 'var(--chakra-space-2)', md: 'var(--chakra-space-4)' }}
                         >
                             <Button
-                                as={NavLink}
+                                onClick={() => navigateTo('/')}
                                 p="5"
                                 color="#37B34A"
                                 variant="none"
                                 transition="transform 0.6s ease"
                                 _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
-                                to='/'
+                              
                             >
                                 Home
                             </Button>
                             <Button
-                                as={NavLink}
-                                to='/about-us'
+                                onClick={() => navigateTo('/about-us')}
+                             
                                 p="5"
                                 color="#37B34A"
                                 variant="none"
@@ -76,8 +74,7 @@ export default function Navbar() {
                                 About us
                             </Button>
                             <Button
-                                as={NavLink}
-                                to='/our-programs'
+                                onClick={() => navigateTo('/programs')}
                                 color="#37B34A"
                                 p={'5'}
                                 variant={'none'}
@@ -87,8 +84,7 @@ export default function Navbar() {
                                 Our Programs
                             </Button>
                             <Button
-                                as={NavLink}
-                                to='/our-team'
+                                onClick={() => navigateTo('/our-team')}
                                                         
                                 p={'5'}
                                 color="#37B34A" variant={'none'}
@@ -98,8 +94,7 @@ export default function Navbar() {
                                 Team
                             </Button>
                             <Button
-                                as={NavLink}
-                                to='/find-us'
+                                onClick={() => navigateTo('/find-us')}
                                 p={'5'}
                                 color="#37B34A" variant={'none'}
                                 transition="transform 0.6s ease"
@@ -108,12 +103,12 @@ export default function Navbar() {
                                 Find us
                             </Button>
                             <Button
-                                as={NavLink}
+                            onClick={()=>navigateTo('/gallery')}
                                 p={'5'}
                                 color="#37B34A" variant={'none'}
                                 transition="transform 0.6s ease"
                                 _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
-                                to='/gallery'
+                                
                             >
                                 Gallery
                             </Button>
@@ -124,6 +119,7 @@ export default function Navbar() {
 
                     <Flex>
                         <Button
+                            onClick={() => navigateTo('/gallery')}
                             bg="white"
                             variant="outline"
                             color="#37B34A"
