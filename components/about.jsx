@@ -128,7 +128,7 @@ export default function About() {
                 src='./service.jpg'
                 alt={`Hero Image `}
                 w="100%"
-                h="40vh"
+                h="60vh"
                 objectFit="cover"
             />
             <Box
