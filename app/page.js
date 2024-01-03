@@ -7,6 +7,7 @@ import Executive from '@/components/executive';
 import OurPrograms from '@/components/ourPrograms.page';
 import ContactUsLayout from '@/components/contact';
 import Gallery from '@/components/gallery';
+import About from '@/components/about';
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState('/');
@@ -17,6 +18,8 @@ export default function Home() {
         return <Start />;
       case '/our-team':
         return <Executive />;
+      case '/about-us':
+        return <About/>
       case '/programs':
         return <OurPrograms />;
       case '/find-us':

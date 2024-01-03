@@ -173,7 +173,7 @@ const TeamPage = () => {
                         }}
                     >
 
-                        <Image src={member.imageUrl} alt={`Image of ${member.name}`} w="100%" h="450px" borderRadius={'lg'} objectFit="cover" />
+                        <Image src={member.imageUrl} alt={`Image of ${member.name}`} w="100%" h="450px" borderRadius={'lg'} loading="lazy" objectFit="cover" />
 
                         <Box>
                             <Text fontSize="lg" fontWeight="bold" mt={'5px'} color={'#214B24'}>

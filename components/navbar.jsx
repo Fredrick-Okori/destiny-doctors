@@ -64,7 +64,6 @@ export default function Navbar({navigateTo}) {
                             </Button>
                             <Button
                                 onClick={() => navigateTo('/about-us')}
-                             
                                 p="5"
                                 color="#37B34A"
                                 variant="none"
