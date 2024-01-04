@@ -187,7 +187,7 @@ export default function About() {
 
                             gap='4'
                         >
-                            <Box bg='#F4F1F1' boxShadow={"var(--chakra-shadows-xl)"} mr='-10' borderRadius='7'>
+                            <Box bg='#f5f7f9' boxShadow={"var(--chakra-shadows-xl)"} mr='-10' borderRadius='7'>
 
                                 <Text color="#214B24" maxW="2xl" textAlign="right" fontSize="xl" p='20' >
                                     When I was founding destiny doctors,

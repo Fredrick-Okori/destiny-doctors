@@ -88,7 +88,7 @@ const TeamPage = () => {
             id: 11,
             name: "Dr. Shamim Nalunkuuma",
             role: "Programs Coordinator",
-            imageUrl: ("/images/Shamim.jpg"), // Update with the actual path to your image
+            imageUrl: ("/images/Casest-8.jpg"), // Update with the actual path to your image
             bio: "Lorem ipsum dolor sit amet",
         },
         {
