@@ -26,7 +26,7 @@ import { FiBriefcase, FiFile, FiHeart, FiSearch, FiUser } from "react-icons/fi";
 const activities = [
     {
         id: 1, 
-        image: './IMG_2506.jpg',
+        image: './gallery/gallery_23.jpeg',
     },
     {
         id: 2,  
@@ -42,7 +42,7 @@ const activities = [
     },
     {
         id: 5,      
-        image: './IMG_3412.jpg',
+        image: './gallery/gallery_6.jpeg',
     },
     {
         id: 6,
@@ -50,19 +50,27 @@ const activities = [
     },
     {
         id: 7,
-        image: './Casest-7.jpg',
+        image: './gallery/gallery_21.jpeg',
     },
     {
         id: 8,
-        image: './Casest-7.jpg',
+        image: './gallery/gallery_25.jpeg',
     },
     {
         id: 9,
-        image: './jb_conference.jpg',
+        image: './gallery/jb_delegate.jpg',
     },
     {
         id: 10,
-        image: './Casest-7.jpg',
+        image: './gallery/nsagu_1.jpg',
+    },
+    {
+        id: 11,
+        image: './gallery/gallery_16.jpeg',
+    },
+    {
+        id: 12,
+        image: './gallery/gallery_17.jpeg',
     },
 
 ]
