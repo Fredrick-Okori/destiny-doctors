@@ -25,23 +25,22 @@ import { FiBriefcase, FiFile, FiHeart, FiSearch, FiUser } from "react-icons/fi";
 const slides = [
     {
         id: 1,
-        image: './homepage-5-slider-img-3.jpg',
-        title: 'Destiny Doctors Uganda',
-        subtitle: 'We are transforming healthcare in our society. Want to join this exciting journey?',
+        image: './surgery.jpeg', 
     },
     {
         id: 2,
-        image: './Carousel_community.jpg',
-        title: 'Called to serve',
-        subtitle: 'We are transforming healthcare in our society. Want to join this exciting journey?',
+        image: './lab.jpeg',    
     },
     {
         id: 3,
-        image: './Casest-7.jpg',
-        title: 'Destiny Doctors Uganda',
-        subtitle: 'We are transforming healthcare in our society. Want to join this exciting journey?',
+        image: './rwimi_ncd.jpg',  
     },
-    // Add more slides as needed
+    {
+        id: 4,
+        image: './group_team.jpg',
+    },
+   
+    
 ];
 
 const activities = [

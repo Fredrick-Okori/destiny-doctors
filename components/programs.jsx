@@ -15,139 +15,14 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 import { FaArrowRight } from 'react-icons/fa';
+import Hero from './herosection.programs';
 
-
+import ProgramsIntroduction from './programs.introduction'
 const ProgramsLayout = () => (
     <>
-        <Box position="relative">
-            <Image
-                src='./programs_outreach.jpg'
-                alt={`Hero Image `}
-                w="100%"
-                h="40vh"
-                objectFit="cover"
-            />
-            <Box
-                position="absolute"
-                top="50%"
-                left="30%"
-                transform="translate(-50%, -50%)"
-                textAlign="center"
-                color="white"
-            >
-                <Text
-                    bgGradient='linear(to-l, #fff, #fff)'
-                    color='white'
-                    bgClip='text'
-                    fontSize={['2xl', '5xl', '6xl']}
-                    fontWeight='extrabold'
-                    noOfLines={1}
-                >
-                    Our Programs
-                </Text>
-                <Text textAlign='left'>
-                    We have a broad expertise in digital health <br /> service execution and
-                    management with our diverse<br /> and multi talented team with experience and skills in<br /> Public Health, Technology, Nursing, Laboratory
-                    and holistic healthcare.
-                </Text>
-            </Box>
-        </Box>
+        <Hero/>
         <Box maxW="100%" mx="auto" px={{ base: '0', lg: '12' }} py={{ base: '0', lg: '12' }} bg={'white'} >
-            <Container maxW="7xl" mt='30px'>
-                <Stack direction={{ base: 'column-reverse', lg: 'row' }} spacing={{ base: '0', lg: '20' }}>
-                    <Box
-                        width={{ lg: 'sm' }}
-                        transform={{ base: 'translateY(-50%)', lg: 'none' }}
-                        bg={{ base: useColorModeValue('red.50', 'gray.700'), lg: 'transparent' }}
-                        mx={{ base: '6', md: '8', lg: '0' }}
-                        px={{ base: '6', md: '8', lg: '0' }}
-                        py={{ base: '6', md: '8', lg: '12' }}
-                    >
-                        <Stack spacing={{ base: '8', lg: '10' }}>
-                            <Stack spacing={{ base: '2', lg: '4' }}>
-                                <Heading size="xl" color={'#214B24'}>
-                                    Community Empowerment Program
-                                </Heading>
-                                <Heading size="md" fontWeight="normal" color={'#214B24'}>
-                                    Providing community outreaches
-                                </Heading>
-                            </Stack>
-                            <HStack spacing="3">
-                                <Link color={{ base: '#ffff', lg: '#214B24' }} fontWeight="bold" fontSize="lg">
-                                    Read More
-                                </Link>
-                                <Icon color={'white'} as={FaArrowRight} />
-                            </HStack>
-                        </Stack>
-                    </Box>
-                    <Flex flex="1" overflow="hidden">
-                        <Image
-                            src="/Iganga_10.jpg"
-                            alt="Lovely Image"
-                            fallback={<Skeleton />}
-                            maxH="450px"
-                            minW="300px"
-                            objectFit="cover"
-                            flex="1"
-
-                        />
-                        <Image
-                            display={{ base: 'none', sm: 'initial' }}
-                            src="rwimi_ncd.jpg"
-                            alt="community Health Empowerment"
-                            fallback={<Skeleton />}
-                            maxH="450px"
-                            objectFit="cover"
-                        />
-                    </Flex>
-                </Stack>
-                <Stack direction={{ base: 'column-reverse', lg: 'row' }} spacing={{ base: '0', lg: '20' }}>
-                    <Box
-                        width={{ lg: 'sm' }}
-                        transform={{ base: 'translateY(-50%)', lg: 'none' }}
-                        bg={{ base: useColorModeValue('red.50', 'gray.700'), lg: 'transparent' }}
-                        mx={{ base: '6', md: '8', lg: '0' }}
-                        px={{ base: '6', md: '8', lg: '0' }}
-                        py={{ base: '6', md: '8', lg: '12' }}
-                    >
-                        <Stack spacing={{ base: '8', lg: '10' }}>
-                            <Stack spacing={{ base: '2', lg: '4' }}>
-                                <Heading size="xl" color={'#214B24'}>
-                                    Digital Health Program
-                                </Heading>
-                                <Heading size="md" fontWeight="normal" color={'#214B24'}>
-                                    Unleashing digital healthcare access
-                                </Heading>
-                            </Stack>
-                            <HStack spacing="3">
-                                <Link color={{ base: '#ffff', lg: '#214B24' }} fontWeight="bold" fontSize="lg">
-                                    Read More
-                                </Link>
-                                <Icon color={{ base: '#ffff', lg: '#214B24' }} as={FaArrowRight} />
-                            </HStack>
-                        </Stack>
-                    </Box>
-                    <Flex flex="1" overflow="hidden">
-                        <Image
-                            src="/jb_conference.jpg"
-                            alt="Digital Health Program"
-                            fallback={<Skeleton />}
-                            maxH="450px"
-                            minW="300px"
-                            objectFit="cover"
-                            flex="1"
-                        />
-                        <Image
-                            display={{ base: 'none', sm: 'initial' }}
-                            src="digital_health.jpg"
-                            alt="Digital Health Program"
-                            fallback={<Skeleton />}
-                            maxH="450px"
-                            objectFit="cover"
-                        />
-                    </Flex>
-                </Stack>
-            </Container>
+            <ProgramsIntroduction/>
         </Box>
     </>
 );

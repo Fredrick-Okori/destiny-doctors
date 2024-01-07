@@ -23,6 +23,7 @@ import { FiMaximize, FiLayers, FiNavigation, FiActivity, FiHeart, FiPocket } fro
 import Executive from "./executive";
 import Programs from './programs'
 import ContactForm from "./contact";
+import ProgramsIntroduction from "./programs.introduction";
 const mission = [
     {
         id: 1,
@@ -161,10 +162,9 @@ export default function Mission() {
                 </Box>
             </Flex>
         </Container>
-    
-            {/* <Executive />
-            <Programs/>
-          <ContactForm/> */}
+
+          <ProgramsIntroduction/>
+        
 
         </>
     );

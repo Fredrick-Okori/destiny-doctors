@@ -1,6 +1,3 @@
-
-'use client'
-import React, {useState} from 'react'
 import {
     Box,
     Button,
@@ -8,31 +5,34 @@ import {
     Container,
     Flex,
     Image,
+    IconButton,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    Spacer,
+    useBreakpointValue,
 } from '@chakra-ui/react';
-import Executive from './executive';
-import Link from 'next/link';
+import { FiMenu } from 'react-icons/fi';
 
-
-
-
-
-export default function Navbar({navigateTo}) {
+export default function Navbar({ navigateTo }) {
+    const isMobile = useBreakpointValue({ base: true, md: false });
 
     return (
         <Box
             as="nav"
+            top="0"
             role="navigation"
             bg="#214B24"
-            pt={{ base: 'var(--chakra-space-6)', md: 'var(--chakra-space-10)' }}
-            pb={{ base: 'var(--chakra-space-6)', md: 'var(--chakra-space-10)' }}
+            pt={{ base: 'var(--chakra-space-4)', md: 'var(--chakra-space-8)' }}
+            pb={{ base: 'var(--chakra-space-4)', md: 'var(--chakra-space-8)' }}
+            
         >
             <Container maxW="var(--chakra-sizes-7xl)">
                 <Flex
-                    display="flex"
                     alignItems="center"
-                    flexDirection={{ base: 'column', md: 'row' }}
-                    justifyContent="space-between"
-                    gap={{ base: 'var(--chakra-space-4)', md: 'var(--chakra-space-8)' }}
+                  
+                    direction={'row'}
                 >
                     <Flex alignItems="center" gap="var(--chakra-space-2)">
                         <Image
@@ -46,75 +46,65 @@ export default function Navbar({navigateTo}) {
                         />
                     </Flex>
 
-                    <Flex>
-                        <ButtonGroup
-                            flexDirection={{ base: 'column', md: 'row' }}
-                            gap={{ base: 'var(--chakra-space-2)', md: 'var(--chakra-space-4)' }}
+                    {isMobile ? (
+                        <Box display={{ base: 'flex', md: 'none' }}>
+                            <Menu>
+                                <MenuButton
+                                    as={IconButton}
+                                    aria-label="Menu"
+                                    bg="transparent"
+                                    color="white"
+                                    icon={<FiMenu />}
+                                />
+                                <MenuList>
+                                    <MenuItem onClick={() => navigateTo('/')}>Home</MenuItem>
+                                    <MenuItem onClick={() => navigateTo('/about-us')}>About us</MenuItem>
+                                    <MenuItem onClick={() => navigateTo('/programs')}>Our Programs</MenuItem>
+                                    <MenuItem onClick={() => navigateTo('/our-team')}>Team</MenuItem>
+                                    <MenuItem onClick={() => navigateTo('/find-us')}>Find us</MenuItem>
+                                    <MenuItem onClick={() => navigateTo('/gallery')}>Gallery</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        </Box>
+                    ) : (
+                        <Flex
+                            display={{ base: 'none', md: 'flex' }}
+                                alignItems="center"
+                                justifyContent={'space-between'}
                         >
-                            <Button
-                                onClick={() => navigateTo('/')}
-                                p="5"
-                                color="#37B34A"
-                                variant="none"
-                                transition="transform 0.6s ease"
-                                _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
-                              
+                            <ButtonGroup
+                                flexDirection="row"
+                                gap={{ base: 'var(--chakra-space-2)', md: 'var(--chakra-space-4)' }}
                             >
-                                Home
-                            </Button>
-                            <Button
-                                onClick={() => navigateTo('/about-us')}
-                                p="5"
-                                color="#37B34A"
-                                variant="none"
-                                transition="transform 0.6s ease"
-                                _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
-                            >
-                                About us
-                            </Button>
-                            <Button
-                                onClick={() => navigateTo('/programs')}
-                                color="#37B34A"
-                                p={'5'}
-                                variant={'none'}
-                                transition="transform 0.6s ease"
-                                _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
-                            >
-                                Our Programs
-                            </Button>
-                            <Button
-                                onClick={() => navigateTo('/our-team')}
-                                                        
-                                p={'5'}
-                                color="#37B34A" variant={'none'}
-                                transition="transform 0.6s ease"
-                                _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
-                            >
-                                Team
-                            </Button>
-                            <Button
-                                onClick={() => navigateTo('/find-us')}
-                                p={'5'}
-                                color="#37B34A" variant={'none'}
-                                transition="transform 0.6s ease"
-                                _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
-                            >
-                                Find us
-                            </Button>
-                            <Button
-                            onClick={()=>navigateTo('/gallery')}
-                                p={'5'}
-                                color="#37B34A" variant={'none'}
-                                transition="transform 0.6s ease"
-                                _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }}
-                                
-                            >
-                                Gallery
-                            </Button>
+                                    <Button p={'5'}
+                                        color="#37B34A" variant={'none'}
+                                        transition="transform 0.6s ease"
+                                        _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }} onClick={() => navigateTo('/')}>Home</Button>
+                                    <Button p={'5'}
+                                        color="#37B34A" variant={'none'}
+                                        transition="transform 0.6s ease"
+                                        _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }} onClick={() => navigateTo('/about-us')}>About us</Button>
+                                    <Button p={'5'}
+                                        color="#37B34A" variant={'none'}
+                                        transition="transform 0.6s ease"
+                                        _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }} onClick={() => navigateTo('/programs')}>Our Programs</Button>
+                                    <Button p={'5'}
+                                        color="#37B34A" variant={'none'}
+                                        transition="transform 0.6s ease"
+                                        _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }} onClick={() => navigateTo('/our-team')}>Team</Button>
+                                    <Button p={'5'}
+                                        color="#37B34A" variant={'none'}
+                                        transition="transform 0.6s ease"
+                                        _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }} onClick={() => navigateTo('/find-us')}>Find us</Button>
+                                    <Button p={'5'}
+                                        color="#37B34A" variant={'none'}
+                                        transition="transform 0.6s ease"
+                                        _hover={{ border: '1px solid #37B34A', transform: 'scale(1.1)' }} onClick={() => navigateTo('/gallery')}>Gallery</Button>
+                            </ButtonGroup>
+                        </Flex>
+                    )}
 
-                        </ButtonGroup>
-                    
-                    </Flex>
+                    <Spacer />
 
                     <Flex>
                         <Button

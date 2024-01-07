@@ -14,6 +14,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { FiArrowRight } from "react-icons/fi";
+import ContactButton from './handleMail';
 
 const slides = [
     {
@@ -51,7 +52,7 @@ const HeroSection = () => {
     return (
         <Slider {...settings}>
             {slides.map((slide) => (
-                <Box key={slide.id} position="relative">
+                <Box key={slide.id} >
                     <Image
                         src={slide.image}
                         alt={`Hero Image ${slide.id}`}
@@ -83,18 +84,7 @@ const HeroSection = () => {
                         </Text>
                         <Box py='7'>
                             <ButtonGroup gap={'2'} mt={'5'} mb={'10'}>
-                                <Button
-                                    bg='white'
-                                    variant='outline'
-                                    color='#37B34A'
-                                    px={{ base: '12', md: '12' }}
-                                    py={{ base: '7', md: '7' }}
-                                    fontWeight="bold"
-                                    _hover={{ bg: '#214B24' }}
-                          
-                                   
-
-                                >Get in touch</Button>
+                              <ContactButton/>
                                 <Button
                                     bg='#214B24'
                                     variant='outline'

@@ -16,7 +16,7 @@ const TeamPage = () => {
             name: "Dr. John Bosco Ssemuyaba",
             role: "Founder & President",
             imageUrl: ("/images/johnbosco.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
 
         {
@@ -24,14 +24,14 @@ const TeamPage = () => {
             name: "Dr. Elijah Ssebaggala",
             role: "Vice President",
             imageUrl: ("/images/elijah.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
         {
             id: 3,
             name: "Dr. Julius Bruno Mugambe",
             role: "Secretary General",
             imageUrl: ("/images/bruno.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
 
         {
@@ -39,35 +39,35 @@ const TeamPage = () => {
             name: "Dr. Sarah Nakato",
             role: "Finance Director",
             imageUrl: ("/images/nakato.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
         {
             id: 5,
             name: "Mr. Mark Kinene",
             role: "Projects Director",
             imageUrl: ("/images/mark.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
         {
             id: 6,
             name: "Dr. Joseph Musiitwa",
             role: "Clinic Director",
             imageUrl: ("/images/musiitwa.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
         {
             id: 7,
             name: "Dr. Samuel Talemwa",
             role: "Monitoring & Quality Assurance Director",
             imageUrl: ("/images/taremwa.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
         {
             id: 8,
             name: "Dr. Stuart Ndawula",
             role: "Information & Computer Technology Director",
             imageUrl: ("/images/stuart.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
 
         {
@@ -75,42 +75,42 @@ const TeamPage = () => {
             name: "Mr. Martin Batte",
             role: "Public Relations Officer",
             imageUrl: ("/images/batte.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
         {
             id: 10,
             name: "Dr. Grace Walusimbi",
             role: "Welfare Coordinator",
             imageUrl: ("/images/wallace.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
         {
             id: 11,
             name: "Dr. Shamim Nalunkuuma",
             role: "Programs Coordinator",
-            imageUrl: ("/images/Casest-8.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+            imageUrl: ("/images/shamim.jpg"), // Update with the actual path to your image
+          
         },
         {
             id: 12,
             name: "Dr. Guy Ronald Baguma",
             role: "Projects & CPD Coordinator",
             imageUrl: ("/images/baguma.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
         {
             id: 13,
             name: "Mr. Fredrick Okori",
             role: "Creative Designer, Software Engineer | Clinician",
             imageUrl: ("/images/fred.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
         {
             id: 14,
             name: "Ruth Rayner, LLB",
             role: "Legal Advisor",
             imageUrl: ("/images/ruth.jpg"), // Update with the actual path to your image
-            bio: "Lorem ipsum dolor sit amet",
+          
         },
 
         // Add more team members as needed

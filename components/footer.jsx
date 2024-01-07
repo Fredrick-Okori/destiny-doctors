@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Container, Link, Flex, Text, VStack } from '@chakra-ui/react';
+import { FiFacebook, FiInstagram, FiLinkedin, FiMail, FiMapPin, FiNavigation, FiTwitter } from 'react-icons/fi';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -21,13 +22,14 @@ const Footer = () => {
             <Box as="footer" bgGradient='linear(#37B34A 0%, #37B34A 25%, #37B34A 50%)' color="#214B24" py="8">
 
                 <Container maxW="container.xl">
-                    <Flex justify="space-between" align="center" flex={{ base: 1, md: 1 }}>
+                    <Flex justify="space-between" align="center" direction={{ base: 'column', lg: 'row' }} spacing={{ base: '0', lg: '20' }}>
                         <VStack align="start" spacing="4">
                             <Text fontSize="lg" fontWeight="bold">
                                 Destiny Doctors Uganda
                             </Text>
-                            <Text>1234 Main Street, Cityville, Country</Text>
-                            <Text>Email: info@example.com</Text>
+                            <Text> <FiMapPin/> P.O.BOX 7782</Text>
+                            <Text> <FiNavigation/> Buzzi, Namulanda, Wakiso</Text>
+                            <Text> <FiMail/> destinydoctors1@gmail.com</Text>
                         </VStack>
                         <VStack align="start" spacing="4">
                             <Text fontSize="lg" fontWeight="bold">
@@ -42,14 +44,17 @@ const Footer = () => {
                             <Text fontSize="lg" fontWeight="bold">
                                 Connect With Us
                             </Text>
-                            <Link href="#" isExternal>
-                                Twitter
+                            <Link href="https://twitter.com/destinydoctors" isExternal>
+                             <FiTwitter/>   Twitter
                             </Link>
-                            <Link href="#" isExternal>
-                                Facebook
+                            <Link href="" isExternal>
+                                <Text><FiFacebook /> Facebook </Text>
                             </Link>
-                            <Link href="#" isExternal>
-                                LinkedIn
+                            <Link href="https://ug.linkedin.com/company/destiny-doctors" isExternal>
+                             <FiLinkedin/>   LinkedIn
+                            </Link>
+                            <Link href="https://www.instagram.com/destinydoctors/?hl=en" isExternal>
+                              <FiInstagram/>  Instagram
                             </Link>
                         </VStack>
                     </Flex>
