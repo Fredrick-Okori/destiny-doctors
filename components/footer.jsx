@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <>
             <Box
-                bgImage="url('/footer-section.jpg')" // Replace with the path to your blurred image
+                // Replace with the path to your blurred image
                 bgSize="cover"
                 bgPosition="center"
                 filter="blur(7px)" // Adjust the blur amount as needed
@@ -27,9 +27,9 @@ const Footer = () => {
                             <Text fontSize="lg" fontWeight="bold">
                                 Destiny Doctors Uganda
                             </Text>
-                            <Text> <FiMapPin/> P.O.BOX 7782</Text>
-                            <Text> <FiNavigation/> Buzzi, Namulanda, Wakiso</Text>
-                            <Text> <FiMail/> destinydoctors1@gmail.com</Text>
+                            <Text>  P.O.BOX 7782</Text>
+                            <Text>  Buzzi, Namulanda, Wakiso</Text>
+                            <Text>  destinydoctors1@gmail.com</Text>
                         </VStack>
                         <VStack align="start" spacing="4">
                             <Text fontSize="lg" fontWeight="bold">
@@ -45,16 +45,17 @@ const Footer = () => {
                                 Connect With Us
                             </Text>
                             <Link href="https://twitter.com/destinydoctors" isExternal>
-                             <FiTwitter/>   Twitter
+                                Twitter
                             </Link>
                             <Link href="" isExternal>
-                                <Text><FiFacebook /> Facebook </Text>
+
+                                Facebook
                             </Link>
                             <Link href="https://ug.linkedin.com/company/destiny-doctors" isExternal>
-                             <FiLinkedin/>   LinkedIn
+                                LinkedIn
                             </Link>
                             <Link href="https://www.instagram.com/destinydoctors/?hl=en" isExternal>
-                              <FiInstagram/>  Instagram
+                                Instagram
                             </Link>
                         </VStack>
                     </Flex>

@@ -72,31 +72,27 @@ const activities = [
         id: 12,
         image: './gallery/gallery_17.jpeg',
     },
+    {
+        id: 13,
+        image: './gallery/karamoja_2.jpeg'
+    },
+     {
+        id: 14,
+        image: './gallery/karamoja.jpeg'
+     }
+    ,
+    {
+        id: 15,
+        image: './gallery/katwe.jpeg'
+    }
+    ,
+    {
+        id: 16,
+        image: './gallery/mentorship.jpeg'
+    }
 
 ]
 
-
-function NextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "green", borderRadius: '100%' }}
-            onClick={onClick}
-        />
-    );
-}
-
-function PrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "green", borderRadius: '100%' }}
-            onClick={onClick}
-        />
-    );
-}
 
 export default function Gallery() {
  
@@ -118,6 +114,8 @@ export default function Gallery() {
                     color='#214B24'
                     textAlign='center'
                     pb='10px'
+                    mt={{ base: '130px' }}
+                    pt={'70'}
                     paddingRight='60px'
                 >
                     What we do
@@ -145,6 +143,7 @@ export default function Gallery() {
                             _moztransition="opacity .25s ease-in-out" // for Firefox
                             _webkittransition="opacity .25s ease-in-out"
                             _hover={{
+                                
                                 transform: "scale(1.05)",
                                 opacity: '0.5',
                                 transition: "opacity .25s ease-in-out"

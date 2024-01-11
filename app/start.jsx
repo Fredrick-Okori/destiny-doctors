@@ -1,7 +1,7 @@
 import React from "react";
-import HeroSection from "./herosection";
-import Mission from "./mission";
-import Partners from "./partnerlogos";
+import HeroSection from "../components/herosection";
+import Mission from "../components/mission";
+import Partners from "../components/partnerlogos";
 
 export default function Start() {
     return (

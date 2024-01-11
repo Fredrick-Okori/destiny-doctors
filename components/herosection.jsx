@@ -13,6 +13,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+
 import { FiArrowRight } from "react-icons/fi";
 import ContactButton from './handleMail';
 
@@ -60,6 +61,7 @@ const HeroSection = () => {
                         h="100vh"
                         objectFit="cover"
                     />
+                  
                     <Box
                         position="absolute"
                         top="50%"
@@ -72,9 +74,9 @@ const HeroSection = () => {
                             bgGradient='linear(to-l, #fff, #fff)'
                             color='white'
                             bgClip='text'
-                            fontSize={['2xl', '5xl', '6xl']}
-                            fontWeight='extrabold'
-                            noOfLines={1}
+                            fontSize={{base: '6xl', lg: '8xl'}}
+                           lineHeight={'1.1'}
+                            fontWeight='extrabold'                     
                         >
                             {slide.title}
                         </Text>
@@ -97,7 +99,8 @@ const HeroSection = () => {
                             </ButtonGroup>
 
                         </Box>
-                    </Box>
+                        </Box>
+                  
                 </Box>
             ))}
         </Slider>

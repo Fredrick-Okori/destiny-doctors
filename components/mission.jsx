@@ -19,11 +19,8 @@ import {
 import { FiMaximize, FiLayers, FiNavigation, FiActivity, FiHeart, FiPocket } from "react-icons/fi";
 
 
-// import TeamPage from "./team";
-import Executive from "./executive";
-import Programs from './programs'
-import ContactForm from "./contact";
 import ProgramsIntroduction from "./programs.introduction";
+import { Slide, ScaleFade } from '@chakra-ui/react';
 const mission = [
     {
         id: 1,
@@ -39,13 +36,7 @@ const mission = [
         body:
             "To ensure equitable access of health and related services to under-served communities ",
     },
-    {
-        id: 3,
-        icon: <FiLayers size={"90"} />,
-        title: "Our objective",
-        body:
-            "To ensure equitable access of health and related services to under-served communities ",
-    },
+
 
 ];
 
@@ -53,7 +44,8 @@ export default function Mission() {
     return (
         <>
             <Container maxW="container.xl" color="#262626" py="7" mt="5">
-            <Flex
+                <ScaleFade initialScale={0.9} in='onLoad'>
+                <Flex
                     direction={{ base: "column", md: "row" }}
                     alignItems={{ base: "center", md: "flex-start" }}
                     placeContent="center"
@@ -64,7 +56,7 @@ export default function Mission() {
                             <Box p={{ base: "4", md: "8" }} key={index}>
                                 <Card
                                     bg={'none'}
-                                    color={'white'}
+
                                     maxW="sm"
                                     transition={"transform .6s ease"}
                                     _hover={{
@@ -81,8 +73,8 @@ export default function Mission() {
                                         </Stack>
                                     </CardBody>
                                 </Card>
-                </Box>
-                ))}
+                            </Box>
+                        ))}
                     </Flex>
 
                     {/* Second Column */}
@@ -96,28 +88,22 @@ export default function Mission() {
                                     3145
                                 </Heading>
                                 <Text>benefited in our community outreach programmes </Text>
-                </Box>
-                <Box borderRight={'1px solid #214B24'} padding={'20px'} textAlign={'center'} color={'#214B24'}>
+                            </Box>
+                            <Box borderRight={'1px solid #214B24'} padding={'20px'} textAlign={'center'} color={'#214B24'}>
                                 <Center> <FiHeart size={'50'} /> </Center>
                                 <Heading as={'h1'}>
                                     5471
                                 </Heading>
                                 <Text>Supported with food relief in COVID-19 pandemic</Text>
-                </Box>
-                <Box borderRight={'1px solid #214B24'} padding={'20px'} textAlign={'center'} color={'#214B24'}>
+                            </Box>
+                            <Box padding={'20px'} textAlign={'center'} color={'#214B24'}>
                                 <Center> <FiHeart size={'50'} /> </Center>
                                 <Heading as={'h1'}>
                                     1908
                                 </Heading>
                                 <Text>Students mentored</Text>
                             </Box>
-                            <Box textAlign={'center'} alignContent={'center'} padding={'20px'} color={'#214B24'}>
-                                <Center> <FiPocket size={'50'} /></Center>
-                                <Heading as={'h1'}  >
-                                    2201
-                                </Heading>
-                                <Text> Reached in Gospel minitries</Text>
-                            </Box>
+
                         </Flex>
                         <Image src="/home-1.jpg" alt='Our meet up' borderRadius={'10'} mt={'20'} mb={'20'} />
                         <Spacer />
@@ -159,12 +145,13 @@ export default function Mission() {
 
 
                         </Box>
-                </Box>
-            </Flex>
-        </Container>
+                    </Box>
+                    </Flex>
+                </ScaleFade>
+            </Container>
 
-          <ProgramsIntroduction/>
-        
+            <ProgramsIntroduction />
+
 
         </>
     );

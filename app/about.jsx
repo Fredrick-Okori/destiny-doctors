@@ -63,12 +63,6 @@ const activities = [
         description: 'It is our strong belief that improving primary health care, improving appropriate access and health outcomes can most cost- effectively be achieved by enhancing existing health systems especially in villages.The Destiny Doctors fratenity seeks to back up this belief through proactively providing evidence of successul pilot community clinic projects to the public and government',
     },
     {
-        id: 4,
-        icon: <FiBriefcase size='40' />,
-        title: "Gospel Ministry",
-        description: 'We are a multi-functional team that are called by God to serve.One of our methods of approach to the community is through gospel enrichment. Our ministry work involves working with community based churches, mosques to reach out tot the community,while carrying out our outreaches, we offer the word of God to the community because we believe we only treat and God does most of the work for us.'
-    },
-    {
         id: 5,
         icon: <FiSearch size='40' />,
         title: "Research",
@@ -89,7 +83,7 @@ function NextArrow(props) {
     return (
         <div
             className={className}
-            style={{ ...style, display: "block", background: "green", borderRadius: '100%' }}
+            style={{ ...style, display: "block", background: "green", borderRadius: '100%', marginLeft: '10px'}}
             onClick={onClick}
         />
     );
@@ -100,7 +94,7 @@ function PrevArrow(props) {
     return (
         <div
             className={className}
-            style={{ ...style, display: "block", background: "green", borderRadius: '100%' }}
+            style={{ ...style, display: "block", background: "green", borderRadius: '100%', marginRight: '10px' }}
             onClick={onClick}
         />
     );
@@ -133,7 +127,7 @@ export default function About() {
             <Box
                 position="absolute"
                 top="50%"
-                left="30%"
+                left="50%"
                 transform="translate(-50%, -50%)"
                 textAlign="left"
                 color="white"
@@ -186,7 +180,7 @@ export default function About() {
 
                             gap='4'
                         >
-                            <Box bg='#f5f7f9' boxShadow={"var(--chakra-shadows-xl)"} mr='-10' borderRadius='7'>
+                            <Box bg='#f5f7f9' boxShadow={"var(--chakra-shadows-xl)"} mr={{base: '10', lg: '-10'}} borderRadius='7'>
 
                                 <Text color="#214B24" maxW="2xl" textAlign="right" fontSize="xl" p='20' >
                                     When I was founding destiny doctors,
@@ -394,7 +388,7 @@ mt='10'
                                     <Image
                                         borderRadius='7px'
                                         src={slide.image}
-                                        alt={`Hero Image ${slide.id}`}
+                                        alt='slides'
                                         width='100%'
                                         maxH='450'
                                         objectFit="cover"

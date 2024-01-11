@@ -1,33 +1,32 @@
 'use client'
-import React, { useState } from 'react';
+import React from 'react';
+import Start from './start';
+import Executive from './executive';
+import OurPrograms from './ourPrograms.page';
+import ContactUsLayout from '@/components/contact';
+import Gallery from './gallery';
+import About from './about';
 import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
-import Start from '@/components/start';
-import Executive from '@/components/executive';
-import OurPrograms from '@/components/ourPrograms.page';
-import ContactUsLayout from '@/components/contact';
-import Gallery from '@/components/gallery';
-import About from '@/components/about';
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState('/');
+  const [currentPage, setCurrentPage] = React.useState('/');
 
   const renderPage = () => {
     switch (currentPage) {
       case '/':
         return <Start />;
-      case '/our-team':
+      case '/page/team':
         return <Executive />;
-      case '/about-us':
-        return <About/>
-      case '/programs':
+      case '/page/about':
+        return <About />
+      case '/page/projects':
         return <OurPrograms />;
-      case '/find-us':
+      case '/page/contact':
         return <ContactUsLayout />;
-      case '/gallery':
+      case '/page/gallery':
         return <Gallery />;
-      case '/programs':
-        return <OurPrograms/>
+      
       default:
         return null;
     }

@@ -18,8 +18,8 @@ import {
 
 import { FiMaximize, FiLayers, FiNavigation, FiActivity, FiHeart, FiPocket } from "react-icons/fi";
 
-import TeamPage from "./team";
-import NavBar from "./navbar";
+import TeamPage from "../components/team";
+import NavBar from "../components/navbar";
 
 export default function Executive() {
     return (
@@ -29,13 +29,13 @@ export default function Executive() {
                     src='./programs_outreach.jpg'
                     alt={`Hero Image `}
                     w="100%"
-                    h="40vh"
+                    h="60vh"
                     objectFit="cover"
                 />
                 <Box
                     position="absolute"
                     top="50%"
-                    left="30%"
+                    left="50%"
                     transform="translate(-50%, -50%)"
                     textAlign="center"
                     color="white"

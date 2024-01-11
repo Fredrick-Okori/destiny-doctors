@@ -14,7 +14,9 @@ import {
     Container,
     Heading, Stack
 } from '@chakra-ui/react';
-import { FiNavigation, FiNavigation2, FiPhoneCall, FiTwitter } from 'react-icons/fi';
+import { FiFacebook, FiInstagram, FiLinkedin, FiMail, FiNavigation, FiNavigation2, FiPhoneCall, FiTwitter } from 'react-icons/fi';
+import ContactButton from './handleMail';
+import Link from 'next/link';
 
 const ContactUsLayout = () => {
     const handleSubmit = (e) => {
@@ -30,7 +32,7 @@ const ContactUsLayout = () => {
                     width="100%" height="450"
                     style={{ border: 0 }}
                     allowfullscreen=""
-                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
             </Box>
@@ -40,7 +42,57 @@ const ContactUsLayout = () => {
                         maxW='container.lg'
                         py={{
                             base: '16',
-                            md: '24',
+                            md: '20',
+                        }}
+                    >
+                        <Stack
+                            spacing={{
+                                base: '8',
+                                md: '10',
+                            }}
+                        >
+
+
+                        </Stack>
+                        <Flex align="center" justify="center" direction={{ base: 'column-reverse', lg: 'row' }}>
+                            <Stack
+                                spacing={{
+                                    base: '4',
+                                    md: '5',
+                                }}
+                                align="center"
+                            >
+                                <Heading
+                                    fontSize='4xl'
+                                    as={'h1'}
+                                    color='#37B34A'
+                                >
+                                   Our Location
+                                </Heading>
+                                <Flex direction={{base: 'column', lg: 'row'}} gap={7}>
+                                    <Text color='#37B34A' fontSize={17}>
+                                       Buzzi, Namulanda, Entebbe Road {" "} | {" "}
+                                    </Text> 
+                                    <Text color='#37B34A' fontSize={17}>
+                                        Email: destinydoctors1@gmail.com
+                                    </Text>
+                                    <Text color='#37B34A' fontSize={17}>
+                                       +256 705 311 386 - +256 774 362 209 
+                                    </Text>
+                                </Flex>
+
+                            </Stack>
+
+
+
+                        </Flex>
+
+                    </Container>
+                    <Container
+                        maxW='container.lg'
+                        py={{
+                            base: '16',
+                            md: '20',
                         }}
                     >
                         <Stack
@@ -67,27 +119,31 @@ const ContactUsLayout = () => {
                                 >
                                     Find us
                                 </Heading>
-                                <FiTwitter/>
-                                
-                            </Stack>
-                            <Box flex="1" bg='white'>
-                                <Flex dir='column'>
-                                    <Box>
+                                <Flex direction={'row'} gap={7}>
+                                    <Link href="https://twitter.com/destinydoctors" isExternal> <FiTwitter size={24} color='#37B34A' /></Link>
+                                    <Link href=''>
+                                        <FiFacebook size={24} color='#37B34A' isExternal />
+                                    </Link>
+                                    <Link href=''>
+                                        <FiInstagram size={24} color='#37B34A' isExternal />
+                                    </Link>
+                                    <Link href="https://ug.linkedin.com/company/destiny-doctors" isExternal>
+                                        <FiLinkedin size={24} color='#37B34A' />
+                                    </Link>
 
-                                    </Box>
-                                    <Box>
-
-                                    </Box>
                                 </Flex>
-                            </Box>
+
+                            </Stack>
+
 
 
                         </Flex>
+
                     </Container>
                     <Container
                         py={{
                             base: '16',
-                            md: '24',
+                            md: '20',
                         }}
                     >
                         <Stack
@@ -145,16 +201,7 @@ const ContactUsLayout = () => {
                                         />
                                     </FormControl>
 
-                                    <Button type="submit" bg="white"
-                                        variant="outline"
-                                        color="#37B34A"
-                                        px={{ base: '6', md: '12' }}
-                                        py={{ base: '4', md: '7' }}
-                                        fontWeight="bold"
-                                        transition="transform 0.6s ease"
-                                        _hover={{ bg: '#214B24', transform: 'scale(1.1)' }} mt="4">
-                                        Submit
-                                    </Button>
+                                    <ContactButton />
                                 </form>
                             </Box>
 
