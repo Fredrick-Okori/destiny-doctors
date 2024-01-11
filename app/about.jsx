@@ -20,7 +20,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaArrowRight, FaFileMedical } from 'react-icons/fa';
-import { FiBriefcase, FiFile, FiHeart, FiSearch, FiUser } from "react-icons/fi";
+import { FiBriefcase, FiFile, FiHeart, FiMonitor, FiPaperclip, FiSearch, FiUser, FiSmile } from "react-icons/fi";
 
 const slides = [
     {
@@ -59,21 +59,22 @@ const activities = [
     {
         id: 3,
         icon: <FiUser size='40' />,
-        title: "Student Mentorship Programme (SMP)",
-        description: 'It is our strong belief that improving primary health care, improving appropriate access and health outcomes can most cost- effectively be achieved by enhancing existing health systems especially in villages.The Destiny Doctors fratenity seeks to back up this belief through proactively providing evidence of successul pilot community clinic projects to the public and government',
+        title: "Mentorship",
+        description: 'This program is tailored to help and give hope to children in school. We give guidance to students to streamline their feature decisions. Still in this program we provide Continuous Professional Development (CPD), Global Professional Exchange, and Scholarships to children & students at all levels',
     },
     {
         id: 5,
         icon: <FiSearch size='40' />,
         title: "Research",
-        description: 'We have a broad expertise in digital health service execution and management with our diverse and multi talented team with experience and skills in Public Health, Technology, '
+        description: 'To improve and increase access to healthcare in under-served communities, research is paramount. We have a group of professionals who carry out community based research to influence decision making while scaling services to these communities. '
     },
     {
         id: 6,
-        icon: <FiFile size='40' />,
-        title: "Scholarships",
-        description: 'We have a broad expertise in digital health service execution and management with our diverse and multi talented team with experience and skills in Public Health, Technology, '
-    },
+        icon: <FiSmile size='40'/>,
+        title: 'Maternal Care',
+        description: 'Under this programe we are provide safe maternal delivery and early childhoold services to pregnant women. We distribute Mama Kit - delivery kit as support to previlledged mothers'
+    }
+   
 
 ]
 
@@ -105,11 +106,10 @@ export default function About() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
+        autoplay: true,
+        fade: true,
+        speed: 2000,
+        autoplaySpeed: 500,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />
 
@@ -313,7 +313,7 @@ mt='10'
 
                         </Heading>
 
-                        <Text color="#214B24" maxW="2xl" textAlign="justify" fontSize="xl"
+                        <Text color="#214B24" maxW="2xl" textAlign="justify" 
                             paddingRight='60px'
 
                         >
@@ -328,6 +328,7 @@ mt='10'
                             Communication and marketing.
                         </Text>
                         <Heading
+                            
                             fontSize='2xl'
                             as={'h2'}
                             color='#214B24'
@@ -339,7 +340,7 @@ mt='10'
                             Belief
 
                         </Heading>
-                        <Text color="#214B24" maxW="2xl" textAlign="justify" fontSize="xl"
+                        <Text color="#214B24" maxW="2xl" textAlign="justify" 
                             paddingRight='60px'
 
                         >
@@ -352,6 +353,7 @@ mt='10'
                             transform the lives of our communities.
                         </Text>
                         <Heading
+                            
                             fontSize='2xl'
                             as={'h2'}
                             color='#214B24'
@@ -363,7 +365,7 @@ mt='10'
                             service
 
                         </Heading>
-                        <Text color="#214B24" maxW="2xl" textAlign="justify" fontSize="xl"
+                        <Text color="#214B24" maxW="2xl" textAlign="justify" 
                             paddingRight='60px'
 
                         >
@@ -374,29 +376,15 @@ mt='10'
 
                     <Box
                         maxWidth={{
-                            base: '100px',
-                            sm: '700px',
+                            
                         }}
                         py={{
                             base: '16',
                             md: '24',
                         }}
                     >
-                        <Slider {...settings}>
-                            {slides.map((slide) => (
-                                <Box key={slide.id} position="relative">
-                                    <Image
-                                        borderRadius='7px'
-                                        src={slide.image}
-                                        alt='slides'
-                                        width='100%'
-                                        maxH='450'
-                                        objectFit="cover"
-                                    />
-
-                                </Box>
-                            ))}
-                        </Slider>
+                      
+                        <Image src="./surgery.jpeg" alt="surgery" borderRadius={7}/>
                     </Box>
                 </Flex>
             </Container>

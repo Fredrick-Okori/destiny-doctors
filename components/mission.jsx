@@ -44,7 +44,7 @@ export default function Mission() {
     return (
         <>
             <Container maxW="container.xl" color="#262626" py="7" mt="5">
-                <ScaleFade initialScale={0.9} in='onLoad'>
+             
                 <Flex
                     direction={{ base: "column", md: "row" }}
                     alignItems={{ base: "center", md: "flex-start" }}
@@ -147,7 +147,7 @@ export default function Mission() {
                         </Box>
                     </Box>
                     </Flex>
-                </ScaleFade>
+               
             </Container>
 
             <ProgramsIntroduction />
