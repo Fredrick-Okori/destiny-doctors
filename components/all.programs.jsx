@@ -36,7 +36,7 @@ const programs = [
         id: 3,
         title: 'Emergency medicine Project',
         subtitle: 'A first respondents initiative to community emergencies',
-        image_1: "./gallery/emergency_training.jpeg",
+        image_1: "./gallery/emergency.jpeg",
         image_2: './surgery-team.jpeg',
         image_3: './surgery-team.jpeg',
         description: 'The Destiny Doctors Emergency Medicine Project is a lifeline in Western Uganda, dedicated to saving lives and building resilient communities. Through our Ambulance Service, we swiftly reach those in critical need, providing timely medical assistance and transport. Moreover, we empower individuals through comprehensive First Aid Training, equipping community members with essential skills to respond effectively in emergencies. Additionally, we conduct extensive Basic and Advanced Life Support training, ensuring that healthcare providers are equipped with the knowledge and expertise to handle critical situations adeptly. Your support powers this vital initiative, enabling us to expand our reach, train more individuals, and provide essential emergency medical services. Join us in being the difference between life and death, ensuring that everyone has access to timely and effective emergency care. Together, we are  saving lives and creating a safer, healthier community.',

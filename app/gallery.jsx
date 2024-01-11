@@ -30,7 +30,7 @@ const activities = [
     },
     {
         id: 2,  
-        image: './IMG_2591.png',
+        image: './gallery/gallery_7.jpeg',
     },
     {
       id: 3, 
@@ -38,7 +38,7 @@ const activities = [
     },
     {
         id: 4,     
-        image: './IMG_3610.png',
+        image: './gallery/emergency.jpeg',
     },
     {
         id: 5,      
@@ -62,7 +62,7 @@ const activities = [
     },
     {
         id: 10,
-        image: './gallery/nsagu_1.jpg',
+        image: './gallery/katwe.jpeg',
     },
     {
         id: 11,
