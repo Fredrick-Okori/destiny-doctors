@@ -5,6 +5,7 @@ import {
     Button,
     ButtonGroup
 } from "@chakra-ui/react";
+import ContactButton from "./handleMail";
 
 
 const TeamPage = () => {
@@ -134,18 +135,9 @@ const TeamPage = () => {
                     >
                         Want to become a member?
                     </Heading>
-                    <Text color={'#214B24'}>Fill our forms and become recognized among our over 300 healthcare providers.</Text>
+                    <Text color={'#214B24'}>Get in touch and become recognized among our over 300 healthcare providers.</Text>
                     <ButtonGroup gap={'2'} mt={'5'} mb={'10'}>
-                        <Button
-                            bg='#37B34A'
-                            variant='outline'
-                            color='#214B24'
-
-                            px="12"
-                            py="7"
-                            fontWeight="bold"
-                            _hover={{ bg: '#214B24', color: '#37B34A' }}
-                        >Join Us</Button>
+                      <ContactButton/>
 
                     </ButtonGroup>
                 </Flex>
