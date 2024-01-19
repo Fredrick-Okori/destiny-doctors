@@ -195,7 +195,7 @@ export default function About() {
                                     Dr. John Bosco Ssemuyaba
                                 </Text>
                                 <Text color='#37B34A' textAlign='right' pr='20' pb='20'>
-                                    Founder & Director
+                                    Founder & President
                                 </Text>
                             </Box>
 

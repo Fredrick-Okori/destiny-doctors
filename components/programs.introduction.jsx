@@ -180,8 +180,7 @@ const ProgramTabs = ({ data }) => {
                                         src={programs[index].image_1}
                                         alt={programs[index].title}
                                         maxW={{ base: "300", lg: "500" }}
-                                        borderRadius={"var(--chakra-radii-lg)"}
-                                        overflow="hidden"
+                                        borderRadius={"var(--chakra-radii-lg)"}                                       
                                         borderColor={"var(--chakra-colors-gray-200)"}
                                         bg={"white"}
                                         boxShadow={"var(--chakra-shadows-xl)"}
@@ -189,7 +188,7 @@ const ProgramTabs = ({ data }) => {
                                         alignItems={"center"}
                                         transition="transform 300ms cubic-bezier(0, 0, 0.2, 1)"
                                         opacity={0.8}
-                                        _moztransition="opacity .25s ease-in-out" // for Firefox
+                                        _moztransition="opacity .25s ease-in-out"
                                         _webkittransition="opacity .25s ease-in-out"
                                         _hover={{
                                             transform: "scale(1.05)",

@@ -198,43 +198,51 @@ export default function Nav({ color, navigateTo }) {
                                         ></Button>
                                         <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
                                             <DrawerOverlay />
-                                            <DrawerContent>
+                                                <DrawerContent bg='#37B34A'>
                                                 <DrawerBody>
                                                     <Button
-                                                        onClick={() => handleButtonClick('/')}
-                                                        color={activeButton === '/' ? '#37B34A' : '#37B34A'}
+                                                        onClickCapture={() => {
+                                                            handleButtonClick('/');
+                                                            onClose();
+                                                        }}
+
+                                                            color={activeButton === '/' ? '#214B24' : '#214B24'}
                                                         variant={'none'}
 
 
                                                     >
                                                         Home
                                                     </Button>
-                                                        <Button onClick={() => handleButtonClick('/page/about')}
-                                                            variant={'none'}
-                                                        color={activeButton === '/page/about' ? '#37B34A' : '#37B34A'}
+                                                    <Button
+                                                        onClick={() => {
+                                                            handleButtonClick('/page/about');
+                                                            onClose();
+                                                        }}
+                                                        variant={'none'}
+                                                            color={activeButton === '/page/about' ? '#214B24' : '#214B24'}
                                                     >
                                                         About us
                                                     </Button>
-                                                    <Button onClick={() => handleButtonClick('/page/projects')}
-                                                        color={activeButton === '/page/projects' ? '#37B34A' : '#37B34A'}
+                                                    <Button onClick={() => { handleButtonClick('/page/projects'), onClose() }}
+                                                        color={activeButton === '/page/projects' ? '#214B24' : '#214B24'}
                                                         variant={'none'}
                                                     >
                                                         Projects
                                                     </Button>
-                                                    <Button onClick={() => handleButtonClick('/page/team')}
-                                                            color={activeButton === '/page/team' ? '#37B34A' : '#37B34A'}
-                                                            variant={'none'}
+                                                    <Button onClick={() => { handleButtonClick('/page/team'); onClose(); }}
+                                                        color={activeButton === '/page/team' ? '#214B24' : '#214B24'}
+                                                        variant={'none'}
                                                     >
                                                         Team
                                                     </Button>
-                                                    <Button onClick={() => { handleButtonClick('/page/contact') }}
-                                                        color={activeButton === '/page/contact' ? '#37B34A' : '#37B34A'}
+                                                    <Button onClick={() => { handleButtonClick('/page/contact'); onClose() }}
+                                                        color={activeButton === '/page/contact' ? '#214B24' : '#214B24'}
                                                         variant={'none'}
                                                     >
                                                         Contact Us
                                                     </Button>
-                                                    <Button onClick={() => handleButtonClick('/page/gallery')}
-                                                        color={activeButton === '/page/gallery' ? '#37B34A' : '#37B34A'}
+                                                    <Button onClick={() => { handleButtonClick('/page/gallery'); onClose() }}
+                                                        color={activeButton === '/page/gallery' ? '#214B24' : '#214B24'}
                                                         variant={'none'}
                                                     >
                                                         Gallery

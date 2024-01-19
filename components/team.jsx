@@ -51,7 +51,7 @@ const TeamPage = () => {
         {
             id: 6,
             name: "Dr. Joseph Musiitwa",
-            role: "Clinic Director",
+            role: "Clinical Director",
             imageUrl: ("/images/musiitwa.jpg"), // Update with the actual path to your image
           
         },
