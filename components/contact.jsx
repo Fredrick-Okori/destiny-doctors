@@ -67,17 +67,17 @@ const ContactUsLayout = () => {
                                     as={'h1'}
                                     color='#37B34A'
                                 >
-                                   Our Location
+                                    Our Location
                                 </Heading>
-                                <Flex direction={{base: 'column', lg: 'row'}} gap={7}>
+                                <Flex direction={{ base: 'column', lg: 'row' }} gap={7}>
                                     <Text color='#37B34A' fontSize={17}>
-                                       Buzzi, Namulanda, Entebbe Road {" "} | {" "}
-                                    </Text> 
+                                        Buzzi, Namulanda, Entebbe Road {" "} | {" "}
+                                    </Text>
                                     <Text color='#37B34A' fontSize={17}>
                                         Email: destinydoctors1@gmail.com
                                     </Text>
                                     <Text color='#37B34A' fontSize={17}>
-                                       +256 705 311 386 - +256 774 362 209 
+                                        +256 705 311 386 - +256 774 362 209
                                     </Text>
                                 </Flex>
 
@@ -167,8 +167,9 @@ const ContactUsLayout = () => {
                                     Want to talk to us?
                                 </Heading>
                                 <Text color="#37B34A" maxW="2xl" textAlign="center" fontSize="xl">
-                                    With this beautiful and responsive React components you will realize your next project
-                                    in no time.
+                                    Send us an email if you are interested in supporting or partnering with us in any of our programs
+
+
                                 </Text>
                             </Stack>
 

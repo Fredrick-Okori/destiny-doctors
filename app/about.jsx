@@ -182,14 +182,21 @@ export default function About() {
                         >
                             <Box bg='#f5f7f9' boxShadow={"var(--chakra-shadows-xl)"} mr={{base: '10', lg: '-10'}} borderRadius='7'>
 
-                                <Text color="#214B24" maxW="2xl" textAlign="right" fontSize="xl" p='20' >
-                                    When I was founding destiny doctors,
-                                    I have always beleived that each
-                                    individual has specific
-                                    skills that is given by
-                                    God and I do think that
-                                    we can use those skills to
-                                    transform the lives of our communities.
+                                <Text color="#214B24" maxW="2xl" textAlign="justify" fontSize="xl" p='20' >
+                                    Having personally witnessed the
+                                    hardships and heartbreak
+                                    endured by those denied access
+                                    to quality medical care, an
+                                    experience tragically compounded
+                                    by the loss of my siblings, my resolve
+                                    to effect change was unyielding.
+                                    This intimate encounter, alongside
+                                    witnessing similar struggles in other
+                                    communities, stirred within me a profound
+                                    empathy and an unwavering determination to
+                                    alleviate the healthcare disparities afflicting
+                                    underserved populations.
+
                                 </Text>
                                 <Text color='#37B34A' textAlign='right' pr='20'>
                                     Dr. John Bosco Ssemuyaba

@@ -8,13 +8,14 @@ import {
     useColorModeValue,
     Image,
     Box,
+    Link,
     Stack,
     useColorMode,
     IconButton,
     useMediaQuery,
     useDisclosure,
     HStack,
-    Link,
+    
     Container,
 } from "@chakra-ui/react";
 
@@ -80,7 +81,10 @@ export default function Nav({ color, navigateTo }) {
                 <Container maxW='container.xl'>
                     <Flex alignItems={"center"} justifyContent={'space-between'}>
                         <Box>
+                            <Link href="/">
+
                             <Image
+                               
                                 bg="#37B34A"
                                 borderRadius="full"
                                 border="1px solid white"
@@ -89,6 +93,7 @@ export default function Nav({ color, navigateTo }) {
                                 boxSize="90px"
                                 width="auto"
                             />
+                            </Link>
                         </Box>
                         <Box>
 
@@ -136,7 +141,7 @@ export default function Nav({ color, navigateTo }) {
                                             }}
                                             border={activeButton === '/page/projects' ? '1px solid #37B34A' : 'none'}
                                         >
-                                            Projects
+                                            Programs
                                         </Button>
                                         <Button
                                             onClick={() => handleButtonClick('/page/team')}
@@ -151,6 +156,20 @@ export default function Nav({ color, navigateTo }) {
                                             border={activeButton === '/page/team' ? '1px solid #37B34A' : 'none'}
                                         >
                                             Team
+                                        </Button>
+                                        <Button
+                                            onClick={() => handleButtonClick('/page/events')}
+                                            color={activeButton === '/page/events' ? '#37B34A' : '#37B34A'}
+                                            variant={'none'}
+                                            transition="transform 0.6s ease"
+                                            _hover={{
+                                                border: '1px solid #37B34A',
+                                                transform: 'scale(1.1)',
+                                                color: '#37B34A',
+                                            }}
+                                            border={activeButton === '/page/events' ? '1px solid #37B34A' : 'none'}
+                                        >
+                                            Events
                                         </Button>
                                         <Button
                                             onClick={() => handleButtonClick('/page/contact')}

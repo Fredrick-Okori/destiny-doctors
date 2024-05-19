@@ -8,6 +8,7 @@ import Gallery from './gallery';
 import About from './about';
 import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
+import Events from './events';
 
 export default function Home() {
   const [currentPage, setCurrentPage] = React.useState('/');
@@ -18,6 +19,11 @@ export default function Home() {
         return <Start />;
       case '/page/team':
         return <Executive />;
+      case '/page/events':
+        return <Events />;
+      case '/page/contact':
+        return <ContactUsLayout />;
+      case '/page/gallery':
       case '/page/about':
         return <About />
       case '/page/projects':
