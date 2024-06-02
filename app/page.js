@@ -24,8 +24,8 @@ export default function Home() {
       case '/page/contact':
         return <ContactUsLayout />;
       case '/page/gallery':
-      case '/page/about':
-        return <About />
+     
+        return <Gallery />
       case '/page/projects':
         return <OurPrograms />;
       case '/page/contact':
