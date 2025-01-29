@@ -22,9 +22,18 @@ export default function RootLayout(props) {
           {children}
           <Footer/>
         </Providers>
-        
-        <chat-widget env="prod" project-id="d2f79889-b34b-4e1c-8952-51931e5c9871"></chat-widget>
-        <Script src="https://cdn.apollo.kayeai.com/js/chat-widget.js" type="module" async></Script>
+
+
+            {/* Chat Widget Script */}
+            <chat-widget
+          env="prod"
+          project-id="d2f79889-b34b-4e1c-8952-51931e5c9871"
+        />
+        <Script
+          crossOrigin="anonymous"
+          src="https://cdn.apollo.kayeai.com/js/chat-widget.js"
+          type="module"
+        />
       </body>
     </html>
   )
