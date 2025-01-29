@@ -90,10 +90,10 @@ export default function Nav() {
                                                 Home
                                             </Button>
                                         </Link>
-                                        <Link href="/about" passHref>
+                                        <Link href="/who-we-are" passHref>
                                             <Button
-                                                onClick={() => setActiveButton('/about')}
-                                                color={activeButton === '/about' ? '#37B34A' : '#37B34A'}
+                                                onClick={() => setActiveButton('/who-we-are')}
+                                                color={activeButton === '/who-we-are' ? '#37B34A' : '#37B34A'}
                                                 variant={'none'}
                                                 transition="transform 0.6s ease"
                                                 _hover={{
@@ -101,9 +101,9 @@ export default function Nav() {
                                                     transform: 'scale(1.1)',
                                                     color: '#37B34A',
                                                 }}
-                                                borderBottom={activeButton === '/about' ? '1px solid #37B34A' : 'none'}
+                                                borderBottom={activeButton === '/who-we-are' ? '1px solid #37B34A' : 'none'}
                                             >
-                                                About us
+                                                About 
                                             </Button>
                                         </Link>
                                         <Link href="/projects" passHref>

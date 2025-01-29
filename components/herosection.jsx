@@ -13,7 +13,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
 import { FiArrowRight } from "react-icons/fi";
 import ContactButton from './handleMail';
 
@@ -53,12 +52,12 @@ const HeroSection = () => {
     return (
         <Slider {...settings}>
             {slides.map((slide) => (
-                <Box key={slide.id} >
+                <Box key={slide.id} position="relative" height="100vh">
                     <Image
                         src={slide.image}
                         alt={`Hero Image ${slide.id}`}
                         w="100%"
-                        h="100vh"
+                        h="100%"
                         objectFit="cover"
                     />
                   
@@ -74,9 +73,9 @@ const HeroSection = () => {
                             bgGradient='linear(to-l, #fff, #fff)'
                             color='white'
                             bgClip='text'
-                            fontSize={{base: '6xl', lg: '8xl'}}
-                           lineHeight={'1.1'}
-                            fontWeight='extrabold'                     
+                            fontSize={{ base: '6xl', lg: '8xl' }}
+                            lineHeight={'1.1'}
+                            fontWeight='extrabold'
                         >
                             {slide.title}
                         </Text>
@@ -86,7 +85,7 @@ const HeroSection = () => {
                         </Text>
                         <Box py='7'>
                             <ButtonGroup gap={'2'} mt={'5'} mb={'10'}>
-                              <ContactButton/>
+                                <ContactButton />
                                 <Button
                                     bg='#214B24'
                                     variant='outline'
@@ -95,12 +94,12 @@ const HeroSection = () => {
                                     py="7"
                                     fontWeight="bold"
                                     _hover={{ bg: '#214B24', color: '#37B34A' }}
-                                >Give to us</Button>
+                                >
+                                    AI Assistant
+                                </Button>
                             </ButtonGroup>
-
                         </Box>
-                        </Box>
-                  
+                    </Box>
                 </Box>
             ))}
         </Slider>
