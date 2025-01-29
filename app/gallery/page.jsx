@@ -16,11 +16,7 @@ import {
     Grid,
     GridItem,
 } from '@chakra-ui/react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { FaArrowRight, FaFileMedical } from 'react-icons/fa';
-import { FiBriefcase, FiFile, FiHeart, FiSearch, FiUser } from "react-icons/fi";
+
 
 
 const activities = [
@@ -107,15 +103,13 @@ export default function Gallery() {
             w="100%"
         >
 
-            <Container maxW='container.2xl'>
+            <Container maxW='container.xl'>
                 <Heading
                     fontSize='4xl'
                     as={'h2'}
                     color='#214B24'
                     textAlign='center'
-                    pb='10px'
-                    mt={{ base: '130px' }}
-                    pt={'70'}
+                   
                     paddingRight='60px'
                 >
                     What we do

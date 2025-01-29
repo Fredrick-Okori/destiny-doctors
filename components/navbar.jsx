@@ -1,3 +1,4 @@
+'use client'
 import {
     Flex,
     Button,
@@ -8,45 +9,26 @@ import {
     useColorModeValue,
     Image,
     Box,
-    Link,
-    Stack,
     useColorMode,
-    IconButton,
     useMediaQuery,
     useDisclosure,
+    IconButton,
     HStack,
-    
     Container,
 } from "@chakra-ui/react";
 
 import { FiMoon, FiSun, FiMenu } from "react-icons/fi";
 import { useState } from "react";
 import ContactButton from "./handleMail";
+import Link from "next/link"; // Import Next.js Link
 
 const TbIcons = require("react-icons/tb");
 
-export default function Nav({ color, navigateTo }) {
-
+export default function Nav() {
 
     const [activeButton, setActiveButton] = useState('#37B34A');
 
-    const handleButtonClick = (path) => {
-        navigateTo(path);
-        setActiveButton(path);
-    };
-
-    const colors = {
-        "blue": "#3182CE",
-        "cyan": "#00B5D8",
-        "gray": "#718096",
-        "green": "#38A169",
-        "orange": "#DD6B20",
-        "pink": "#D53F8C",
-        "purple": "#805AD5",
-        "red": "#E53E3E",
-        "teal": "#319795",
-        "yellow": "#D69E2E"
-    };
+   
     const [scroll, setScroll] = useState(false);
     const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -58,17 +40,13 @@ export default function Nav({ color, navigateTo }) {
     };
 
 
-    const TbLetterComponents = [];
-
-
 
     return (
         <>
-
             <Flex
                 bg={'#214B24'}
                 px={4}
-                p={5}
+                p={3}
                 boxShadow={scroll ? "base" : "none"}
                 zIndex="sticky"
                 position="fixed"
@@ -77,134 +55,151 @@ export default function Nav({ color, navigateTo }) {
                 justifyContent={"space-between"}
                 w="100%"
             >
-
                 <Container maxW='container.xl'>
                     <Flex alignItems={"center"} justifyContent={'space-between'}>
                         <Box>
-                            <Link href="/">
-
-                            <Image
-                               
-                                bg="#37B34A"
-                                borderRadius="full"
-                                border="1px solid white"
-                                src="/images/Destiny_green.png"
-                                alt="Destiny Doctors Uganda"
-                                boxSize="90px"
-                                width="auto"
-                            />
+                            <Link href="/" passHref>
+                                <Image
+                                    bg="#37B34A"
+                                    borderRadius="full"
+                                    border="1px solid white"
+                                    src="/images/Destiny_green.png"
+                                    alt="Destiny Doctors Uganda"
+                                    boxSize="60px"
+                                    width="auto"
+                                />
                             </Link>
                         </Box>
                         <Box>
-
-
-                            <Stack direction={"row"} spacing={7}>
+                            <HStack direction={"row"}>
                                 {isLargerThanMD ? (
                                     <>
-                                        <Button
-                                            onClick={() => handleButtonClick('/')}
-                                            color={activeButton === '/' ? '#37B34A' : '#37B34A'}
-                                            variant={'none'}
-                                            transition="transform 0.6s ease"
-                                            _hover={{
-                                                border: '1px solid #37B34A',
-                                                transform: 'scale(1.1)',
-                                                color: '#37B34A',
-                                            }}
-                                            border={activeButton === '/' ? '1px solid #37B34A' : 'none'}
-                                        >
-                                            Home
-                                        </Button>
-                                        <Button
-                                            onClick={() => handleButtonClick('/page/about')}
-                                            color={activeButton === '/page/about' ? '#37B34A' : '#37B34A'}
-                                            variant={'none'}
-                                            transition="transform 0.6s ease"
-                                            _hover={{
-                                                border: '1px solid #37B34A',
-                                                transform: 'scale(1.1)',
-                                                color: '#37B34A',
-                                            }}
-                                            border={activeButton === '/page/about' ? '1px solid #37B34A' : 'none'}
-                                        >
-                                            About us
-                                        </Button>
-                                        <Button
-                                            onClick={() => handleButtonClick('/page/projects')}
-                                            color={activeButton === '/page/projects' ? '#37B34A' : '#37B34A'}
-                                            variant={'none'}
-                                            transition="transform 0.6s ease"
-                                            _hover={{
-                                                border: '1px solid #37B34A',
-                                                transform: 'scale(1.1)',
-                                                color: '#37B34A',
-                                            }}
-                                            border={activeButton === '/page/projects' ? '1px solid #37B34A' : 'none'}
-                                        >
-                                            Programs
-                                        </Button>
-                                        <Button
-                                            onClick={() => handleButtonClick('/page/team')}
-                                            color={activeButton === '/page/team' ? '#37B34A' : '#37B34A'}
-                                            variant={'none'}
-                                            transition="transform 0.6s ease"
-                                            _hover={{
-                                                border: '1px solid #37B34A',
-                                                transform: 'scale(1.1)',
-                                                color: '#37B34A',
-                                            }}
-                                            border={activeButton === '/page/team' ? '1px solid #37B34A' : 'none'}
-                                        >
-                                            Team
-                                        </Button>
-                                        <Button
-                                            onClick={() => handleButtonClick('/page/events')}
-                                            color={activeButton === '/page/events' ? '#37B34A' : '#37B34A'}
-                                            variant={'none'}
-                                            transition="transform 0.6s ease"
-                                            _hover={{
-                                                border: '1px solid #37B34A',
-                                                transform: 'scale(1.1)',
-                                                color: '#37B34A',
-                                            }}
-                                            border={activeButton === '/page/events' ? '1px solid #37B34A' : 'none'}
-                                        >
-                                            Events
-                                        </Button>
-                                        <Button
-                                            onClick={() => handleButtonClick('/page/contact')}
-                                            color={activeButton === '/page/contact' ? '#37B34A' : '#37B34A'}
-                                            variant={'none'}
-                                            transition="transform 0.6s ease"
-                                            _hover={{
-                                                border: '1px solid #37B34A',
-                                                transform: 'scale(1.1)',
-                                                color: '#37B34A',
-                                            }}
-                                            border={activeButton === '/page/contact' ? '1px solid #37B34A' : 'none'}
-                                        >
-                                            Contact Us
-                                        </Button>
-                                        <Button
-                                            onClick={() => handleButtonClick('/page/gallery')}
-                                            color={activeButton === '/page/gallery' ? '#37B34A' : '#37B34A'}
-                                            variant={'none'}
-                                            transition="transform 0.6s ease"
-                                            _hover={{
-                                                border: '1px solid #37B34A',
-                                                transform: 'scale(1.1)',
-                                                color: '#37B34A',
-                                            }}
-                                            border={activeButton === '/page/gallery' ? '1px solid #37B34A' : 'none'}
-                                        >
-                                            Gallery
-                                        </Button>
-
+                                        <Link href="/" passHref>
+                                            <Button
+                                                onClick={() => setActiveButton('/')}
+                                                color={activeButton === '/' ? '#37B34A' : '#37B34A'}
+                                                variant={'none'}
+                                                transition="transform 0.6s ease"
+                                                _hover={{
+                                                    borderBottom: '1px solid #37B34A',
+                                                    transform: 'scale(1.1)',
+                                                    color: '#37B34A',
+                                                }}
+                                                borderBottom={activeButton === '/' ? '1px solid #37B34A' : 'none'}
+                                            >
+                                                Home
+                                            </Button>
+                                        </Link>
+                                        <Link href="/about" passHref>
+                                            <Button
+                                                onClick={() => setActiveButton('/about')}
+                                                color={activeButton === '/about' ? '#37B34A' : '#37B34A'}
+                                                variant={'none'}
+                                                transition="transform 0.6s ease"
+                                                _hover={{
+                                                    borderBottom: '1px solid #37B34A',
+                                                    transform: 'scale(1.1)',
+                                                    color: '#37B34A',
+                                                }}
+                                                borderBottom={activeButton === '/about' ? '1px solid #37B34A' : 'none'}
+                                            >
+                                                About us
+                                            </Button>
+                                        </Link>
+                                        <Link href="/projects" passHref>
+                                            <Button
+                                                onClick={() => setActiveButton('/projects')}
+                                                color={activeButton === '/projects' ? '#37B34A' : '#37B34A'}
+                                                variant={'none'}
+                                                transition="transform 0.6s ease"
+                                                _hover={{
+                                                    borderBottom: '1px solid #37B34A',
+                                                    transform: 'scale(1.1)',
+                                                    color: '#37B34A',
+                                                }}
+                                                borderBottom={activeButton === '/projects' ? '1px solid #37B34A' : 'none'}
+                                            >
+                                                Programs
+                                            </Button>
+                                        </Link>
+                                        <Link href="/team" passHref>
+                                            <Button
+                                                onClick={() => setActiveButton('/team')}
+                                                color={activeButton === '/team' ? '#37B34A' : '#37B34A'}
+                                                variant={'none'}
+                                                transition="transform 0.6s ease"
+                                                _hover={{
+                                                    borderBottom: '1px solid #37B34A',
+                                                    transform: 'scale(1.1)',
+                                                    color: '#37B34A',
+                                                }}
+                                                borderBottom={activeButton === '/team' ? '1px solid #37B34A' : 'none'}
+                                            >
+                                                Team
+                                            </Button>
+                                        </Link>
+                                        <Link href="/events" passHref>
+                                            <Button
+                                                onClick={() => setActiveButton('/events')}
+                                                color={activeButton === '/events' ? '#37B34A' : '#37B34A'}
+                                                variant={'none'}
+                                                transition="transform 0.6s ease"
+                                                _hover={{
+                                                    borderBottom: '1px solid #37B34A',
+                                                    transform: 'scale(1.1)',
+                                                    color: '#37B34A',
+                                                }}
+                                                borderBottom={activeButton === '/events' ? '1px solid #37B34A' : 'none'}
+                                            >
+                                                Events
+                                            </Button>
+                                        </Link>
+                                        <Link href="/contact" passHref>
+                                            <Button
+                                                onClick={() => setActiveButton('/contact')}
+                                                color={activeButton === '/contact' ? '#37B34A' : '#37B34A'}
+                                                variant={'none'}
+                                                transition="transform 0.6s ease"
+                                                _hover={{
+                                                    borderBottom: '1px solid #37B34A',
+                                                    transform: 'scale(1.1)',
+                                                    color: '#37B34A',
+                                                }}
+                                                borderBottom={activeButton === '/contact' ? '1px solid #37B34A' : 'none'}
+                                            >
+                                                Contact Us
+                                            </Button>
+                                        </Link>
+                                        <Link href="/gallery" passHref>
+                                            <Button
+                                                onClick={() => setActiveButton('/gallery')}
+                                                color={activeButton === '/gallery' ? '#37B34A' : '#37B34A'}
+                                                variant={'none'}
+                                                transition="transform 0.6s ease"
+                                                _hover={{
+                                                    borderBottom: '1px solid #37B34A',
+                                                    transform: 'scale(1.1)',
+                                                    color: '#37B34A',
+                                                }}
+                                                borderBottom={activeButton === '/gallery' ? '1px solid #37B34A' : 'none'}
+                                            >
+                                                Gallery
+                                            </Button>
+                                        </Link>
+                                        <Link href="/gallery" target="_blank" passHref>
+                                                        <Button
+                                                            onClick={() => setActiveButton('/gallery')}
+                                                            color='white'
+                                                            variant='filled'
+                                                        >
+                                                            AI Assistant
+                                                        </Button>
+                                                    </Link>
+                                                  
                                     </>
                                 ) : (
                                     <></>
                                 )}
-
 
                                 {isLargerThanMD ? (
                                     <></>
@@ -217,72 +212,83 @@ export default function Nav({ color, navigateTo }) {
                                         ></Button>
                                         <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
                                             <DrawerOverlay />
-                                                <DrawerContent bg='#37B34A'>
+                                            <DrawerContent bg='#37B34A'>
                                                 <DrawerBody>
-                                                    <Button
-                                                        onClickCapture={() => {
-                                                            handleButtonClick('/');
-                                                            onClose();
-                                                        }}
-
+                                                    <Link href="/" passHref>
+                                                        <Button
+                                                            onClickCapture={() => setActiveButton('/')}
                                                             color={activeButton === '/' ? '#214B24' : '#214B24'}
-                                                        variant={'none'}
-
-
-                                                    >
-                                                        Home
-                                                    </Button>
-                                                    <Button
-                                                        onClick={() => {
-                                                            handleButtonClick('/page/about');
-                                                            onClose();
-                                                        }}
-                                                        variant={'none'}
-                                                            color={activeButton === '/page/about' ? '#214B24' : '#214B24'}
-                                                    >
-                                                        About us
-                                                    </Button>
-                                                    <Button onClick={() => { handleButtonClick('/page/projects'), onClose() }}
-                                                        color={activeButton === '/page/projects' ? '#214B24' : '#214B24'}
-                                                        variant={'none'}
-                                                    >
-                                                        Projects
-                                                    </Button>
-                                                    <Button onClick={() => { handleButtonClick('/page/team'); onClose(); }}
-                                                        color={activeButton === '/page/team' ? '#214B24' : '#214B24'}
-                                                        variant={'none'}
-                                                    >
-                                                        Team
-                                                    </Button>
-                                                    <Button onClick={() => { handleButtonClick('/page/contact'); onClose() }}
-                                                        color={activeButton === '/page/contact' ? '#214B24' : '#214B24'}
-                                                        variant={'none'}
-                                                    >
-                                                        Contact Us
-                                                    </Button>
-                                                    <Button onClick={() => { handleButtonClick('/page/gallery'); onClose() }}
-                                                        color={activeButton === '/page/gallery' ? '#214B24' : '#214B24'}
-                                                        variant={'none'}
-                                                    >
-                                                        Gallery
-                                                    </Button>
-                                                    <Button variant='outline'>
-                                                        Donate
-                                                    </Button>
+                                                            variant={'none'}
+                                                        >
+                                                            Home
+                                                        </Button>
+                                                    </Link>
+                                                    <Link href="/projects" passHref>
+                                                        <Button
+                                                            onClick={() => setActiveButton('/projects')}
+                                                            color={activeButton === '/projects' ? '#214B24' : '#214B24'}
+                                                            variant={'none'}
+                                                        >
+                                                            Projects
+                                                        </Button>
+                                                    </Link>
+                                                    <Link href="/projects" passHref>
+                                                        <Button
+                                                            onClick={() => setActiveButton('/projects')}
+                                                            color={activeButton === '/projects' ? '#214B24' : '#214B24'}
+                                                            variant={'none'}
+                                                        >
+                                                            Projects
+                                                        </Button>
+                                                    </Link>
+                                                    <Link href="/team" passHref>
+                                                        <Button
+                                                            onClick={() => setActiveButton('/team')}
+                                                            color={activeButton === '/team' ? '#214B24' : '#214B24'}
+                                                            variant={'none'}
+                                                        >
+                                                            Team
+                                                        </Button>
+                                                    </Link>
+                                                    <Link href="/contact" passHref>
+                                                        <Button
+                                                            onClick={() => setActiveButton('/contact')}
+                                                            variant={'none'}
+                                                            color={activeButton === '/contact' ? '#214B24' : '#214B24'}
+                                                        >
+                                                            Contact Us
+                                                        </Button>
+                                                    </Link>
+                                                    <Link href="/gallery" passHref>
+                                                        <Button
+                                                            onClick={() => setActiveButton('/gallery')}
+                                                            color={activeButton === '/gallery' ? '#214B24' : '#214B24'}
+                                                            variant={'none'}
+                                                        >
+                                                            Gallery
+                                                        </Button>
+                                                    </Link>
+                                                    <Link href="/gallery" passHref>
+                                                        <Button
+                                                            onClick={() => setActiveButton('/gallery')}
+                                                            color={activeButton === '/gallery' ? '#214B24' : '#214B24'}
+                                                            variant={'none'}
+                                                        >
+                                                            AI Assistant
+                                                        </Button>
+                                                    </Link>
+                                                  
                                                 </DrawerBody>
                                             </DrawerContent>
                                         </Drawer>
                                     </>
                                 )}
-                            </Stack>
+                            </HStack>
                         </Box>
-                        {isLargerThanMD && (
-                            <ContactButton />
-                        )}
                     </Flex>
                 </Container>
             </Flex>
-
         </>
     );
 }
+

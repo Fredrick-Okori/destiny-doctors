@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "./herosection.programs";
-import ContactButton from "./handleMail";
+import ContactButton from "../../../components/handleMail";
 
 import { Container, Flex, Box, Text, Image, ButtonGroup, Divider, Heading, } from "@chakra-ui/react";
 

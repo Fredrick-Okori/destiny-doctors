@@ -18,8 +18,7 @@ import {
 
 import { FiMaximize, FiLayers, FiNavigation, FiActivity, FiHeart, FiPocket } from "react-icons/fi";
 
-import TeamPage from "../components/team";
-import NavBar from "../components/navbar";
+import TeamPage from "./parts/team";
 
 export default function Executive() {
     return (

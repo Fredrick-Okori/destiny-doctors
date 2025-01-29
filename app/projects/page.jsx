@@ -1,6 +1,8 @@
 import React from "react";
-import Partners from "../components/partnerlogos";
-import ProgramsLayout from "../components/programs";
+
+
+import Partners from "../../components/partnerlogos";
+import ProgramsLayout from "./parts/programs";
 
 export default function OurPrograms() {
     return (

@@ -15,7 +15,9 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 import { FaArrowRight } from 'react-icons/fa';
-import EventsParts from "@/components/events.parts";
+
+
+import EventsParts from "./parts/events.parts";
 
 
 export default function Events() {

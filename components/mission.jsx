@@ -19,7 +19,9 @@ import {
 import { FiMaximize, FiLayers, FiNavigation, FiActivity, FiHeart, FiPocket } from "react-icons/fi";
 
 
-import ProgramsIntroduction from "./programs.introduction";
+
+import ProgramsIntroduction from "@/app/projects/parts/programs.introduction";
+
 import { Slide, ScaleFade } from '@chakra-ui/react';
 const mission = [
     {

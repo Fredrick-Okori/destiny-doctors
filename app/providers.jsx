@@ -1,10 +1,8 @@
-// app/providers.js
-'use strict';
+// app/providers.tsx
+'use client'
 
-import { Box, ChakraProvider, extendTheme, useBreakpointValue } from '@chakra-ui/react';
-
+import { ChakraProvider } from '@chakra-ui/react'
 
 export function Providers({ children }) {
-
-    return <ChakraProvider>{children}</ChakraProvider>;
+  return <ChakraProvider>{children}</ChakraProvider>
 }

@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import {
     Box, Grid, Image, Flex, Text, Center, Heading,
@@ -5,7 +6,9 @@ import {
     Button,
     ButtonGroup
 } from "@chakra-ui/react";
-import ContactButton from "./handleMail";
+
+
+import ContactButton from "@/components/handleMail";
 
 
 const TeamPage = () => {

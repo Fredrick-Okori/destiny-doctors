@@ -20,7 +20,7 @@ import {
 import {  FiActivity, FiCalendar, FiCheck, FiHeart, FiNavigation} from "react-icons/fi";
 
 
-import Mission from './mission'
+
 
 export default function EventsParts() {
     return (

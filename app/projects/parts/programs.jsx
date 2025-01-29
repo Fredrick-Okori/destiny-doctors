@@ -15,10 +15,12 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 import { FaArrowRight } from 'react-icons/fa';
-import Hero from './herosection.programs';
-import AllPrograms from './all.programs';
 
-import ProgramsIntroduction from './programs.introduction'
+import Hero from './herosection.programs';
+
+
+import ProgramsIntroduction from './programs.introduction';
+
 const ProgramsLayout = () => (
     <>
         <Hero/>

@@ -28,9 +28,12 @@ import {
 import { useMediaQuery } from '@chakra-ui/react';
 
 import { FiChevronRight, FiChevronsLeft, } from "react-icons/fi";
+
 import AllPrograms from "./all.programs";
 
-import ContactButton from "./handleMail";
+
+
+import ContactButton from "@/components/handleMail";
 
 const programs = [
     {
