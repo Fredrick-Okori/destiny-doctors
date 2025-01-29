@@ -186,7 +186,7 @@ export default function Nav() {
                                                 Gallery
                                             </Button>
                                         </Link>
-                                        <Link href="/gallery" target="_blank" passHref>
+                                        <Link href="https://assistant.apollo.kayeai.com/d2f79889-b34b-4e1c-8952-51931e5c9871" target="_blank" passHref>
                                                         <Button
                                                             onClick={() => setActiveButton('/gallery')}
                                                             color='white'
